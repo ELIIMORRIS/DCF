@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.8; /* Increase the line height for more space between lines */
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #2C3E50;
+}
+
+button.collapsible {
+    background-color: #3498DB;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button.collapsible:hover {
+    background-color: #2980B9;
+}
+
+button.collapsible.active {
+    background-color: #2980B9; /* Change the background color when active */
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;   /* Initially set to 0 for collapsing effect */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;  /* Smooth expand/collapse */
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;  /* Remove underline */
+    color: #3498DB;         /* Set the link color */
+    font-weight: bold;      /* Make the link text bold to stand out */
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #3498DB; /* Same as link color */
+    transform: scaleX(0);      /* Start with the line hidden */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+a:hover::after {
+    transform: scaleX(1);  /* Underline grows on hover */
+}
+
+a:hover {
+    color: #2980B9;   /* Change color on hover */
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 1px dotted black; /* Optional for underlining the word */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
