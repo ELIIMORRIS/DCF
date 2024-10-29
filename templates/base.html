@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url_for('home') }}">DCF Guide</a>
+            <a class="navbar-brand" href="https://hwb.gov.wales/curriculum-for-wales/cross-curricular-skills-frameworks/digital-competence-framework/" target="_blank">DCF Guide</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,7 +35,6 @@
                             <li><a class="dropdown-item" href="{{ url_for('identify_repetitions') }}">Identify Repetitions</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('refining_algorithms') }}">Refining Algorithms</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('importance_of_order') }}">Importance of Order</a></li>
-                            <!-- Add more dropdown items as needed -->
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -64,7 +63,6 @@
     <footer class="text-center py-3 mt-4 bg-light">
         <p>&copy; 2024 Data and Computational Thinking</p>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

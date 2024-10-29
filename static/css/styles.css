@@ -9,15 +9,6 @@ header {
     margin-bottom: 20px;
 }
 
-h1, h2 {
-    color: #2C3E50;
-}
-
-.problem-solving .tab-pane#ps-step2 { background-color: #e0f5e2; /* Light Green */ }
-.problem-solving .tab-pane#ps-step3 { background-color: #c2e0c6; /* Darker Green */ }
-.data-literacy .tab-pane#dl-step2 { background-color: #e0f3fa; /* Light Blue */ }
-.data-literacy .tab-pane#dl-step3 { background-color: #c2e0f5; /* Darker Blue */ }
-
 button.collapsible {
     background-color: #3498DB;
     color: white;
@@ -89,33 +80,20 @@ button.collapsible.active {
     height: 100%;
 }
 
-a {
-    text-decoration: none;  /* Remove underline */
-    color: #3498DB;         /* Set the link color */
-    font-weight: bold;      /* Make the link text bold to stand out */
-    position: relative;
+a:link {
+	text-decoration: none;
 }
-
-a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background-color: #3498DB; /* Same as link color */
-    transform: scaleX(0);      /* Start with the line hidden */
-    transition: transform 0.3s ease; /* Smooth transition */
-}
-
-a:hover::after {
-    transform: scaleX(1);  /* Underline grows on hover */
+a:visited {
+  text-decoration: none;
 }
 
 a:hover {
-    color: #2980B9;   /* Change color on hover */
+  text-decoration: underline;
 }
 
+a:active {
+  text-decoration: underline;
+}
 
 /* Tooltip container */
 .tooltip {
