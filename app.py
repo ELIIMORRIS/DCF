@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory, abort
+import os
 
 app = Flask(__name__)
 
@@ -57,6 +58,15 @@ def importance_of_order():
 @app.route('/computational_thinking')
 def computational_thinking():
     return render_template('computational_thinking.html')
+
+@app.route('/download/<filename>')
+def download_file(filename):
+    downloads_dir = 'static/downloads'
+    # Ensure the file exists in the directory
+    if os.path.isfile(os.path.join(downloads_dir, filename)):
+        return send_from_directory(downloads_dir, filename, as_attachment=True)
+    else:
+        abort(404)  # Return a 404 if the file does not exist
 
 @app.route('/resources')
 def resources():
