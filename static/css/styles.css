@@ -30,6 +30,18 @@ button.collapsible.active {
     background-color: #2980B9; /* Change the background color when active */
 }
 
+.red-button {
+    background-color: #f41128; /* Bootstrap's red color */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.red-button:hover {
+    background-color: #b41e2d; /* Slightly darker red on hover */
+    text-decoration: none; /* Remove underline */
+}
+
 .content {
     padding: 0 18px;
     max-height: 0;   /* Initially set to 0 for collapsing effect */
