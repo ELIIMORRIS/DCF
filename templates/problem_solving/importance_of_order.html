@@ -1,6 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="container">
+    <h2>Interactive Sequencing Game: Getting Ready for School</h2>
+    <p>Drag the steps from the left and drop them in the correct order on the right.</p>
+    <div class="container">
+        <div class="list" id="list1">
+            <div class="item" draggable="true">Item 1</div>
+            <div class="item" draggable="true">Item 2</div>
+            <div class="item" draggable="true">Item 3</div>
+        </div>
+        <div class="list" id="list2">
+            <div class="item" draggable="true">Item 4</div>
+            <div class="item" draggable="true">Item 5</div>
+            <div class="item" draggable="true">Item 6</div>
+        </div>
+    </div>
 
 {% endblock %}
