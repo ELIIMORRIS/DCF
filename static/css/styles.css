@@ -1,7 +1,10 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.8; /* Increase the line height for more space between lines */
+    line-height: 1.8;
     padding: 20px;
+    color: #2C3E50;
+    background-color: #f9f9f9;
 }
 
 header {
@@ -9,6 +12,7 @@ header {
     margin-bottom: 20px;
 }
 
+/* Collapsible Button Styling */
 button.collapsible {
     background-color: #3498DB;
     color: white;
@@ -17,67 +21,138 @@ button.collapsible {
     width: 100%;
     border: none;
     text-align: left;
-    outline: none;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    outline: none;
 }
 
-button.collapsible:hover {
+button.collapsible:hover,
+button.collapsible.active {
     background-color: #2980B9;
 }
 
-button.collapsible.active {
-    background-color: #2980B9; /* Change the background color when active */
-}
-
+/* Red Button Styling */
 .red-button {
-    background-color: #f41128; /* Bootstrap's red color */
+    background-color: #f41128;
     color: white;
     padding: 8px 16px;
     border-radius: 5px;
     text-decoration: none;
 }
+
 .red-button:hover {
-    background-color: #b41e2d; /* Slightly darker red on hover */
-    text-decoration: none; /* Remove underline */
+    background-color: #b41e2d;
 }
 
-.content {
-    padding: 0 18px;
-    max-height: 0;   /* Initially set to 0 for collapsing effect */
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;  /* Smooth expand/collapse */
+/* Tab Navigation Styling */
+.nav-tabs .nav-link {
+    color: #2C3E50;
+    background-color: #e9ecef;
+    margin-right: 5px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px 5px 0 0;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-tabs .nav-link.active {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3498DB;
+}
+
+/* Specific Tab Colors */
+#ps-step2-tab, #ps-step3-tab {
+    background-color: #00AB66;
+}
+#ps-step2-tab:hover,
+#ps-step3-tab:hover {
+    background-color: #03c19b;
+}
+#dl-step2-tab {
+    background-color: #E74C3C;
+}
+#dl-step2-tab:hover {
+    background-color: #C0392B;
+}
+#dl-step3-tab {
+    background-color: #F39C12;
+}
+#dl-step3-tab:hover {
+    background-color: #E67E22;
+}
+
+/* Tab Content Background and Padding */
+.tab-content .tab-pane {
     background-color: #f1f1f1;
-    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    margin-top: -5px;
+}
+/* Style links to look like regular text */
+.tab-content .tab-pane a {
+    color: #2C3E50; /* Set your desired color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Optional: makes the text bold */
 }
 
+.tab-content .tab-pane a:hover {
+    color: #3498DB; /* Optional: hover color */
+    text-decoration: none;
+}
+/* Icon Color */
+.custom-content ul li i {
+    color: #3498DB;
+    font-size: 1.3em;
+}
+
+/* Add space between icon and text */
+.custom-content a i {
+    margin-right: 8px; /* Adjust space as needed */
+    vertical-align: middle; /* Aligns icon better with text */
+}
+
+/* Section Header Styling */
+.problem-solving h2, .data-literacy h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    color: #2C3E50;
+}
+
+/* Image Styling */
 .section-image {
     width: 100%;
     max-width: 600px;
     height: auto;
     border-radius: 8px;
     margin: 20px 0;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    border: 4px solid #d3d3d3; /* Light gray border */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border: 4px solid #d3d3d3;
 }
 
 .section-image:hover {
-    transform: scale(1.02); /* Slight zoom-in effect */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    transform: scale(1.02);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-container {
-    background-color: #f0f8ff; /* Light background color */
+    background-color: #f0f8ff;
     padding: 15px;
     border-radius: 10px;
     max-width: 650px;
     margin: 20px auto;
 }
 
+/* Video Container */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -92,30 +167,22 @@ button.collapsible.active {
     height: 100%;
 }
 
-a:link {
-	text-decoration: none;
+/* Link Styles */
+a:link, a:visited {
+    text-decoration: none;
 }
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+a:hover, a:active {
+    text-decoration: underline;
 }
 
-a:active {
-  text-decoration: underline;
-}
-
-/* Tooltip container */
+/* Tooltip Styling */
 .tooltip {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    border-bottom: 1px dotted black; /* Optional for underlining the word */
+    border-bottom: 1px dotted black;
 }
 
-/* Tooltip text */
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 300px;
@@ -128,7 +195,6 @@ a:active {
     z-index: 1;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }

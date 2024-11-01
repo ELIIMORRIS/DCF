@@ -3,11 +3,10 @@
 {% block title %}Data and Computational Thinking{% endblock %}
 
 {% block content %}
-
     <main>
         <!-- Problem-Solving and Modelling Section -->
         <section class="problem-solving">
-            <h2>Problem-Solving and Modelling</h2>
+            <h2><i class="fas fa-brain"></i>Problem-Solving and Modelling</h2>
             <!-- Tab nav for Problem-Solving -->
             <ul class="nav nav-tabs" id="problemSolvingTabs" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -20,24 +19,25 @@
             <!-- Tab content for Problem-Solving -->
             <div class="tab-content" id="problemSolvingTabContent">
                 <div class="tab-pane fade show active" id="ps-step2" role="tabpanel" aria-labelledby="ps-step2-tab">
-                    <ul>
-                        <li><a href="{{ url_for('break_down_a_problem') }}">I can break down a problem to predict its outcome.</a></li>
-                        <li><a href="{{ url_for('debugging') }}">I can detect and correct mistakes which cause instructions (a solution) to fail (debug).</a></li>
-                        <li><a href="{{ url_for('instructions_test_ideas') }}">I can create and record verbal, written, and symbolic instructions to test ideas, e.g., the order of waking up through a diagram or flowchart.</a></li>
-                        <li><a href="{{ url_for('instructions_change') }}">I can change instructions to achieve a different outcome.</a></li>
-                        <li><a href="{{ url_for('identify_repetitions') }}">I can identify repetitions or loops in a sequence, e.g., identify where to shorten a set of instructions by repeating steps, for instance, when learning a new song.</a></li>
-                    </ul>
+                    <i class="fas fa-puzzle-piece"></i><a href="{{ url_for('break_down_a_problem') }}">I can break down a problem to 
+                        predict its outcome.</a><br>
+                    <i class="fas fa-bug"></i><a href="{{ url_for('debugging') }}">I can detect and correct mistakes which cause 
+                        instructions (a solution) to fail (debug).</a><br>
+                    <a href="{{ url_for('instructions_test_ideas') }}">I can create and record verbal, written, and symbolic 
+                        instructions to test ideas, e.g., the order of waking up through a diagram or flowchart.</a><br>
+                    <a href="{{ url_for('instructions_change') }}">I can change instructions to achieve a different outcome.</a><br>
+                    <a href="{{ url_for('identify_repetitions') }}">I can identify repetitions or loops in a sequence, e.g., identify where 
+                        to shorten a set of instructions by repeating steps, for instance, when learning a new song.</a>
                 </div>
             <div class="tab-pane fade" id="ps-step3" role="tabpanel" aria-labelledby="ps-step3-tab">
-                <ul>
-                    <li><a href="{{ url_for('refining_algorithms') }}">I can create and refine algorithms and flowcharts to solve problems, making use of features such as loops, Boolean values, and formulae.</a></li>
-                    <li><a href="{{ url_for('importance_of_order') }}">I can understand the importance of the order of statements within algorithms.</a></li>
-                </ul>
+                <a href="{{ url_for('refining_algorithms') }}"><i class="fas fa-cogs"></i>I can create and refine algorithms and flowcharts to 
+                    solve problems, making use of features such as loops, Boolean values, and formulae.</a><br>
+                <a href="{{ url_for('importance_of_order') }}">I can understand the importance of the order of statements within algorithms.</a>
             </div>
         </section>
         <!-- Data and Information Literacy Section -->
         <section class="data-literacy">
-            <h2>Data and Information Literacy</h2>
+            <h2><i class="fas fa-database"></i>Data and Information Literacy</h2>
             <!-- Tab nav for Data Literacy -->
             <ul class="nav nav-tabs" id="dataLiteracyTabs" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -50,16 +50,16 @@
             <!-- Tab content for Data Literacy -->
             <div class="tab-content" id="dataLiteracyTabContent">
                 <div class="tab-pane fade show active" id="dl-step2" role="tabpanel" aria-labelledby="dl-step2-tab">
-                <ul>
-                    <li><a href="{{ url_for('data_format') }}">I can collect, enter, organise, and analyse data into different groups or formats, e.g., tables, charts, databases, and spreadsheets.</a></li>
-                    <li><a href="{{ url_for('evaluate_data') }}">I can extract and evaluate information from tables and graphs to answer questions.</a></li>
-                </ul>
-            </div>
+                    <i class="fas fa-table"></i><a href="{{ url_for('data_format') }}">I can collect, enter, organise, and 
+                        analyse data into different groups or formats, e.g., tables, charts, databases, and spreadsheets.</a><br>
+                    <i class="fas fa-chart-bar"></i><a href="{{ url_for('evaluate_data') }}">I can extract and evaluate information 
+                        from tables and graphs to answer questions.</a>
+                </div>
             <div class="tab-pane fade" id="dl-step3" role="tabpanel" aria-labelledby="dl-step3-tab">
-                <ul>
-                    <li><a href="{{ url_for('data_sets') }}">I can construct, refine, and interrogate data sets within tables, charts, spreadsheets, and databases to test or support an investigation.</a></li>
-                    <li><a href="{{ url_for('spreadsheet_formulae') }}">I can use a range of spreadsheet formulae, e.g., +, -, /, x, sum, average, max, min.</a></li>
-                </ul>
+                <i class="fas fa-database"></i><a href="{{ url_for('data_sets') }}">I can construct, refine, and interrogate 
+                        data sets within tables, charts, spreadsheets, and databases to test or support an investigation.</a><br>
+                <a href="{{ url_for('spreadsheet_formulae') }}">I can use a range of spreadsheet formulae, 
+                        e.g., +, -, /, x, sum, average, max, min.</a>
             </div>
         </section>
     </main>
