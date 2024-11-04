@@ -11,37 +11,45 @@ document.querySelectorAll('.collapsible').forEach(button => {
     });
 });
 
-const items = document.querySelectorAll('.item');
-const lists = document.querySelectorAll('.list');
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to decrement badge count
+    function decrementBadge(badgeId) {
+        const badge = document.getElementById(badgeId);
+        let count = parseInt(badge.innerText);
+        
+        if (count > 0) {
+            count--;
+            badge.innerText = count;
+            // Hide badge if count reaches 0
+            if (count === 0) {
+                badge.style.display = "none";
+            }
+        }
+    }
 
-items.forEach(item => {
-    item.addEventListener('dragstart', dragStart);
-    item.addEventListener('dragend', dragEnd);
+    // Attach click event to links in Progression Step 2 tab
+    document.querySelectorAll("#ps-step2 a").forEach(link => {
+        link.addEventListener("click", function() {
+            decrementBadge("ps-step2-badge");
+        });
+    });
+
+    // Attach click event to links in Progression Step 3 tab
+    document.querySelectorAll("#ps-step3 a").forEach(link => {
+        link.addEventListener("click", function() {
+            decrementBadge("ps-step3-badge");
+        });
+    });
+
+    // Similarly, set up for Data Literacy tabs
+    document.querySelectorAll("#dl-step2 a").forEach(link => {
+        link.addEventListener("click", function() {
+            decrementBadge("dl-step2-badge");
+        });
+    });
+    document.querySelectorAll("#dl-step3 a").forEach(link => {
+        link.addEventListener("click", function() {
+            decrementBadge("dl-step3-badge");
+        });
+    });
 });
-
-lists.forEach(list => {
-    list.addEventListener('dragover', dragOver);
-    list.addEventListener('drop', drop);
-});
-
-function dragStart(e) {
-    e.dataTransfer.setData('text/plain', e.target.id);
-    setTimeout(() => {
-        e.target.classList.add('hide');
-    }, 0);
-}
-
-function dragEnd(e) {
-    e.target.classList.remove('hide');
-}
-
-function dragOver(e) {
-    e.preventDefault();
-}
-
-function drop(e) {
-    e.preventDefault();
-    const id = e.dataTransfer.getData('text/plain');
-    const draggable = document.getElementById(id);
-    e.target.appendChild(draggable);
-}

@@ -2,10 +2,18 @@
 {% block title %}Computational Thinking{% endblock %}
 {% block content %}
     <main>
-        <h2><i class="fa-solid fa-laptop-code"></i>Computational Thinking</h2>
+        <h4 style="color: #e523ffea;"><i class="fa-solid fa-laptop-code"></i>Computational Thinking is a combination of 
+            scientific enquiry, problem-solving, and thinking skills.</h4>
         <section>
             <p>
-                Computational thinking is a combination of scientific enquiry, problem-solving, and thinking skills. 
+                <h2>Four Aspects of Computational Thinking</h2>
+                <ul>
+                    <li><strong>Abstraction:</strong> Simplifying complex problems by focusing on the relevant details.</li>
+                    <li><strong>Decomposition:</strong> Breaking a problem into smaller, manageable parts.</li>
+                    <li><strong>Pattern Recognition:</strong> Identifying similarities or patterns in data.</li>
+                    <li><strong>Algorithm Design:</strong> Creating a step-by-step solution to a problem.</li>
+                </ul>
+                Computational thinking 
                 Before learners can use computers to solve problems, they must first understand the problem and the methods of solving them. 
                 Through these elements, learners will understand the importance of data and information literacy, and they will explore aspects of collection, representation, and analysis. 
                 Learners will look at how data and information links into our digital world and will provide them with essential skills for the modern, dynamic workplace.
@@ -23,13 +31,6 @@
             </div>
         </section>
         <section>
-            <h2>Four Aspects of Computational Thinking</h2>
-            <ul>
-                <li><strong>Abstraction:</strong> Simplifying complex problems by focusing on the relevant details.</li>
-                <li><strong>Decomposition:</strong> Breaking a problem into smaller, manageable parts.</li>
-                <li><strong>Pattern Recognition:</strong> Identifying similarities or patterns in data.</li>
-                <li><strong>Algorithm Design:</strong> Creating a step-by-step solution to a problem.</li>
-            </ul>
             <!-- Button to download the PDF -->
             <a href="{{ url_for('download_file', filename='Barefoot_guide_to_computational_thinking.pdf') }}" class="btn btn-primary" download> 
                 Download Computational Thinking Guide

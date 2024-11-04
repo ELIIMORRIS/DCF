@@ -12,26 +12,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* Collapsible Button Styling */
-button.collapsible {
-    background-color: #3498DB;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    outline: none;
-}
-
-button.collapsible:hover,
-button.collapsible.active {
-    background-color: #2980B9;
-}
-
-/* Red Button Styling */
+/* DCF Red Button Styling */
 .red-button {
     background-color: #f41128;
     color: white;
@@ -44,109 +25,109 @@ button.collapsible.active {
     background-color: #b41e2d;
 }
 
-/* Tab Navigation Styling */
-.nav-tabs .nav-link {
-    color: #2C3E50;
-    background-color: #e9ecef;
-    margin-right: 5px;
-    padding: 8px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px 5px 0 0;
+/* Accordion Button Styles for Problem Solving */
+#problemSolvingAccordion .accordion-button {
+    background-color: #00AB66; /* Light Green for Problem-Solving */
+    color: white;
+    font-size: 18px;
+    border: none;
+    outline: none;
 }
 
-.nav-tabs .nav-link:hover {
-    color: #ffffff;
+#problemSolvingAccordion .accordion-button:not(.collapsed) {
+    background-color: #008A55; /* Dark Green when expanded */
 }
 
-.nav-tabs .nav-link.active {
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #3498DB;
-}
-
-/* Specific Tab Colors */
-#ps-step2-tab, #ps-step3-tab {
-    background-color: #00AB66;
-}
-#ps-step2-tab:hover,
-#ps-step3-tab:hover {
+#problemSolvingAccordion .accordion-button:hover {
     background-color: #03c19b;
 }
-#dl-step2-tab {
-    background-color: #E74C3C;
-}
-#dl-step2-tab:hover {
-    background-color: #C0392B;
-}
-#dl-step3-tab {
-    background-color: #F39C12;
-}
-#dl-step3-tab:hover {
-    background-color: #E67E22;
+
+/* Accordion Button Styles for Data Literacy */
+#dataLiteracyAccordion .accordion-button {
+    background-color: #E67E22; /* Light Orange for Data Literacy */
+    color: white;
+    font-size: 18px;
+    border: none;
+    outline: none;
 }
 
-/* Tab Content Background and Padding */
+#dataLiteracyAccordion .accordion-button:not(.collapsed) {
+    background-color: #F39C12; /* Dark Orange when expanded */
+}
+
+#dataLiteracyAccordion .accordion-button:hover {
+    background-color: #d35400;
+}
+
+/* Tab Navigation Styles */
+#problemSolvingTabs .nav-link {
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+#problemSolvingTabs .nav-link.active {
+    background-color: #00AB66; /* Green for active Problem Solving tabs */
+    color: white;
+}
+
+#dataLiteracyTabs .nav-link {
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+#dataLiteracyTabs .nav-link.active {
+    background-color: #E67E22; /* Orange for active Data Literacy tabs */
+    color: white;
+}
+
+/* Tab Pane Content Styling */
 .tab-content .tab-pane {
     background-color: #f1f1f1;
     padding: 20px;
-    border-radius: 0 0 8px 8px;
-    margin-top: -5px;
-}
-/* Style links to look like regular text */
-.tab-content .tab-pane a {
-    color: #2C3E50; /* Set your desired color */
-    text-decoration: none; /* Remove underline */
-    font-weight: 500; /* Optional: makes the text bold */
-}
-
-.tab-content .tab-pane a:hover {
-    color: #3498DB; /* Optional: hover color */
-    text-decoration: none;
-}
-/* Icon Color */
-.custom-content ul li i {
-    color: #3498DB;
-    font-size: 1.3em;
-}
-
-/* Add space between icon and text */
-.custom-content a i {
-    margin-right: 8px; /* Adjust space as needed */
-    vertical-align: middle; /* Aligns icon better with text */
-}
-
-/* Section Header Styling */
-.problem-solving h2, .data-literacy h2 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.5em;
+    border-radius: 8px;
+    margin-top: 5px;
     color: #2C3E50;
 }
 
-/* Image Styling */
-.section-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-    border: 4px solid #d3d3d3;
+/* Problem-Solving Tab Pane Colors */
+#ps-step2 {
+    background-color: #e0f8ea; /* Light Green Background for Step 2 */
 }
 
-.section-image:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+#ps-step3 {
+    background-color: #d6f5e3; /* Dark Green Background for Step 3 */
 }
 
-.image-container {
-    background-color: #f0f8ff;
-    padding: 15px;
-    border-radius: 10px;
-    max-width: 650px;
-    margin: 20px auto;
+/* Data Literacy Tab Pane Colors */
+#dl-step2 {
+    background-color: #fce2cd; /* Light Orange Background for Step 2 */
+}
+
+#dl-step3 {
+    background-color: #fad7b3; /* Dark Orange Background for Step 3 */
+}
+
+/* Style the Problem Solving dropdown button */
+#problemDropdown {
+    background-color: #00AB66; /* Sets background color to green */
+    color: white; /* Changes text color to white for contrast */
+}
+
+/* Style the Data dropdown button */
+#dataDropdown {
+    background-color: #E67E22;
+    color: white;
+}
+
+/* Icon and Link Styling */
+.tab-pane a {
+    color: #2C3E50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.tab-pane a:hover {
+    color: #3498DB;
 }
 
 /* Video Container */
@@ -165,36 +146,4 @@ button.collapsible.active {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-/* Link Styles */
-a:link, a:visited {
-    text-decoration: none;
-}
-a:hover, a:active {
-    text-decoration: underline;
-}
-
-/* Tooltip Styling */
-.tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 300px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
 }

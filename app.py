@@ -34,48 +34,48 @@ def home():
 # Route for each topic page.  trailing slash '/url/' added for following. if URL accessed w/o trailing slash, Flask will redirect to the canonical URL with the trailing slash
 @app.route('/data_literacy/data_format')
 def data_format():
-    return render_template('data_literacy/data_format.html', header=headers['data_format'])
+    return render_template('data_literacy/data_format.html', header=headers['data_format'], color="#E67E22")
 
 @app.route('/data_literacy/evaluate_data')
 def evaluate_data():
-    return render_template('data_literacy/evaluate_data.html', header=headers['evaluate_data'])
+    return render_template('data_literacy/evaluate_data.html', header=headers['evaluate_data'], color="#E67E22")
 
 @app.route('/data_literacy/data_sets')
 def data_sets():
-    return render_template('data_literacy/data_sets.html', header=headers['data_sets'])
+    return render_template('data_literacy/data_sets.html', header=headers['data_sets'], color="#E67E22")
 
 @app.route('/data_literacy/spreadsheet_formulae')
 def spreadsheet_formulae():
-    return render_template('data_literacy/spreadsheet_formulae.html', header=headers['spreadsheet_formulae'])
+    return render_template('data_literacy/spreadsheet_formulae.html', header=headers['spreadsheet_formulae'], color="#E67E22")
 
 # Routes for 'problem_solving' pages
 @app.route('/problem_solving/break_down_a_problem')
 def break_down_a_problem():
-    return render_template('problem_solving/break_down_a_problem.html', header=headers['break_down_a_problem'])
+    return render_template('problem_solving/break_down_a_problem.html', header=headers['break_down_a_problem'], color="#00AB66")
 
 @app.route('/problem_solving/debugging')
 def debugging():
-    return render_template('problem_solving/debugging.html', header=headers['debugging'])
+    return render_template('problem_solving/debugging.html', header=headers['debugging'], color="#00AB66")
 
 @app.route('/problem_solving/instructions_test_ideas')
 def instructions_test_ideas():
-    return render_template('problem_solving/instructions_test_ideas.html', header=headers['instructions_test_ideas'])
+    return render_template('problem_solving/instructions_test_ideas.html', header=headers['instructions_test_ideas'], color="#00AB66")
 
 @app.route('/problem_solving/instructions_change')
 def instructions_change():
-    return render_template('problem_solving/instructions_change.html', header=headers['instructions_change'])
+    return render_template('problem_solving/instructions_change.html', header=headers['instructions_change'], color="#00AB66")
 
 @app.route('/problem_solving/identify_repetitions')
 def identify_repetitions():
-    return render_template('problem_solving/identify_repetitions.html', header=headers['identify_repetitions'])
+    return render_template('problem_solving/identify_repetitions.html', header=headers['identify_repetitions'], color="#00AB66")
 
 @app.route('/problem_solving/refining_algorithms')
 def refining_algorithms():
-    return render_template('problem_solving/refining_algorithms.html', header=headers['refining_algorithms'])
+    return render_template('problem_solving/refining_algorithms.html', header=headers['refining_algorithms'], color="#00AB66")
 
 @app.route('/problem_solving/importance_of_order')
 def importance_of_order():
-    return render_template('problem_solving/importance_of_order.html', header=headers['importance_of_order'])
+    return render_template('problem_solving/importance_of_order.html', header=headers['importance_of_order'], color="#00AB66")
 
 # Routes for other pages
 @app.route('/computational_thinking')
