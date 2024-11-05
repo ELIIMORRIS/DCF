@@ -1,7 +1,20 @@
 from flask import Flask, render_template, send_from_directory, abort
+from flask_sqlalchemy import SQLAlchemy
 import os
+from models import db, LessonActivity, UserProgress  # Import models
 
 app = Flask(__name__)
+
+# Set up your database configuration here
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///your_database.db'  # Update the path as needed
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Initialize the database with the app
+db.init_app(app)
+
+# Create the database tables if they do not already exist
+with app.app_context():
+    db.create_all()  # This creates all tables defined in your models
 
 # Centralised headers dictionary
 headers = {
@@ -94,6 +107,11 @@ def download_file(filename):
 @app.route('/resources')
 def resources():
     return render_template('resources.html', header=headers['resources'])
+
+@app.route('/activities')
+def activities():
+    all_activities = LessonActivity.query.all()
+    return render_template('activities.html', activities=all_activities)
 
 if __name__ == '__main__':
     app.run(debug=True)
