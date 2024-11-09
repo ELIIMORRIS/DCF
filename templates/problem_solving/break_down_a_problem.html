@@ -1,36 +1,36 @@
 {% extends "base.html" %}
-
+{% set page_id = "break_down_a_problem" %}
+{% block header_button %}
+    <button onclick="markAsComplete('break_down_a_problem')" id="btn-break_down_a_problem">Mark Completed</button>
+{% endblock %}
 {% block content %}
-    <main>
-        <section>
-            <h2>Introduction</h2>
-            <p>Decomposition is the process of breaking down a complex problem into smaller, manageable tasks. It helps us solve problems step by step.</p>
-        </section>
-        <section>
-            <h2>Activity Example</h2>
-            <p>Let’s break down the process of cleaning your bedroom</p>
-            <p>Ask learners to design their room</p>
-            <p>Now assign cleaning tasks.</p>
-            <ul>
-                <li>Wake up</li>
-                <li>Brush teeth</li>
-                <li>Have breakfast</li>
-                <li>Pack bag</li>
-                <li>Leave for school</li>
-            </ul>
-            <p>This is how we can decompose a complex task like getting ready in the morning.</p>
-        </section>
-        <section>
-            <h2>Interactive Activity</h2>
-            <p>Try arranging these steps in the correct order in the following drag-and-drop activity:</p>
-            <!-- Embed or create drag-and-drop functionality with JavaScript here -->
-        </section>
-        <section>
-            <h2>Resources</h2>
-            <ul>
-                <li><a href="https://hwb.gov.wales" target="_blank">Hwb Resource on Decomposition</a></li>
-                <li><a href="https://barefootcomputing.org" target="_blank">Barefoot Computing Decomposition Activities</a></li>
-            </ul>
-        </section>
-    </main>
+<main>
+    <section>
+        <h3 class="text-center"><i class="fas fa-puzzle-piece"></i> I can break down a problem to predict its outcome.</h3>
+        <p class="text-center">Decomposition is the process of breaking down a complex problem into smaller, manageable tasks. It helps us solve problems step by step.</p>
+    </section>
+    <section>
+        <div class="container text-start">
+            <div class="row">
+                <div class="col"><h4 style="color: #008A55;">Example: Clean a Bedroom</h4>
+                    <p>The goal is to clean a bedroom. Let’s break down this process into tasks.</br>
+                    1. Ask students to design their room and identify variables e.g. bed, carpet, wardrobe.</br>
+                    2. Now students can assign functions in the form of cleaning tasks.</br>
+                    Tasks could include hoovering, making a bed, putting away clothes.<br>
+                    3. Identify any patterns, such as tasks that follow a sequence or occur simultaneously.<br>
+                    This is how we can decompose a large task into smaller parts.</p>
+                </div>
+                <div class="col"><img src="{{ url_for('static', filename='images/bedroom.png') }}" alt="Bedroom" class="section-image"><br>
+                <i>Image source: https://www.tinytap.com/activities/g2dby/play/tidy-the-room</i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        This activity has shown by dividing a larger problem into smaller, manageable parts, we can tackle each piece individually 
+        and understand how each component contributes to the overall solution.<br>
+        <h4 style="color: #008A55;">Applying Decomposition in Coding</h4>
+        Better control over complex problems and confidently predict results by understanding each part’s function and impact.<br>
+    </section>
+</main>
 {% endblock %}

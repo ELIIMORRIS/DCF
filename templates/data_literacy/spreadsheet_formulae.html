@@ -1,10 +1,58 @@
 {% extends "base.html" %}
-
+{% set page_id = "spreadsheet_formulae" %}
+{% block header_button %}
+    <button onclick="markAsComplete('spreadsheet_formulae')" id="btn-spreadsheet_formulae">Mark Completed</button>
+{% endblock %}
 {% block content %}
 
-I can use a range of spreadsheet formulae, e.g., +, -, /, x, sum, average, max, min.
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable@12.0.1/dist/handsontable.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/handsontable@12.0.1/dist/handsontable.min.js"></script>
+  <h3 class="text-center"><i class="fa-solid fa-file-excel"></i>I can use a range of spreadsheet formulae, e.g., +, -, /, x, sum, average, max, min.</h3>
+<h4 style="color: #E67E22;">Spreadsheet Formulae Demonstration</h4>
+  <div id="spreadsheet1"></div>
+
+  <h2>Interactive Spreadsheet Formulae Demonstration</h2>
+  <div id="spreadsheet1"></div> <!-- First table container -->
+
+  <h2>Car Sales Data Table</h2>
+  <div id="spreadsheet2"></div> <!-- Second table container -->
+  <script>
+    const container = document.getElementById('spreadsheet');
+
+    const hot = new Handsontable(container, {
+      data: [
+        ['Operation', 'Number 1', 'Number 2', 'Formula', 'Result'],
+        ['Addition', 10, 5, '=B2+C2', ''],                // Demonstrates +
+        ['Subtraction', 10, 5, '=B3-C3', ''],             // Demonstrates -
+        ['Multiplication', 10, 5, '=B4*C4', ''],          // Demonstrates *
+        ['Division', 10, 5, '=B5/C5', ''],                // Demonstrates 
+        ['Average', 10, 20, '=AVERAGE(B6:C6)', ''],       // Demonstrates AVERAGE
+        ['Max', 10, 20, '=MAX(B7:C7)', ''],               // Demonstrates MAX
+        ['Min', 10, 20, '=MIN(B8:C8)', ''],               // Demonstrates MIN
+        ['Sum', 10, 20, '=SUM(B9:C9)', ''],               // Demonstrates SUM
+      ],
+      rowHeaders: true,
+      colHeaders: true,
+      formulas: true,
+      height: 'auto',
+      autoWrapRow: true,
+      autoWrapCol: true,
+      licenseKey: 'non-commercial-and-evaluation',
+      afterChange: function(changes, source) {
+        if (source === 'edit') {
+          hot.render();
+        }
+      }
+    });
+  </script>
+
+
+
+Spreadhseet formulas are tools that can quickly process data.<br>
+
 Spreasheets is a generic term (not only Excel).<br>
 Spreadshetts can often make mathematics much easier as tehy do the caluclations for you, giving more time to understadn the mathematical concepts.<br>
+We can use spreadsheets for practical tasks like budgeting.
 
 https://www.attechedu.com/single-post/teaching-spreadsheets-a-guide-to-introducing-spreadsheets-to-primary-students
 

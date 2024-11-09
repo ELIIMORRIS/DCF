@@ -1,12 +1,19 @@
 {% extends "base.html" %}
-
+{% set page_id = "identify_repetitions" %}
+{% block header_button %}
+    <button onclick="markAsComplete('identify_repetitions')" id="btn-identify_repetitions">Mark Completed</button>
+{% endblock %}
 {% block content %}
-<i class="fa-solid fa-shapes"></i>
-Recognize patterns and repetitions in sequences.
+<main>
+    <section>
+        <h3 class="text-center"><i class="fa-solid fa-repeat"></i>I can identify repetitions or loops in a sequence, e.g., identify where to shorten a set of instructions by repeating steps, for instance, when learning a new song. 
+        <h4 style="color: #008A55;">Activities</h4>
 <h1>Shapes</h1>
 <p>Making shapes.
     Putting shapes together to make a new different shape.
 </p>
 <img src="{{ url_for('static', filename='images/repetition_looping.png') }}" alt="Looping" class="section-image">
 <p>Identify where to shorten a set of instructions by repeating steps</p>
+Recognising patterns or repetitions is key in coding and problem-solving.<br>
+Identifying repetitions can simplify tasks, like planning repeated instructions 
 {% endblock %}

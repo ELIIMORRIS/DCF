@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center"><i class="fa-solid fa-globe"></i> Glossary</h1>
+<p>Add: Recursion</p>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+    {% for term, definition in glossary.items() %}
+    <div class="col mb-4">
+        <div class="card">
+            <div class="card-header term">
+                {{ term }}
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ definition }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

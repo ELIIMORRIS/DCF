@@ -1,9 +1,13 @@
 {% extends "base.html" %}
-
+{% set page_id = "refining_algorithms" %}
+{% block header_button %}
+    <button onclick="markAsComplete('refining_algorithms')" id="btn-refining_algorithms">Mark Completed</button>
+{% endblock %}
 {% block content %}
-
-
 <main>
+    <h3 class="text-center"><i class="fas fa-cogs"></i>I can create and refine algorithms and flowcharts to solve problems, making use of features such as loops, Boolean values, and formulae.</h3>
+    <h4 style="color: #008A55;">Activities</h4>
+
     <h3>Basic programming concepts</h3>
     Variables, loops, conditionals, Boolean values, formulae. Loops:
         <h4>For loop</h4> when the number of iterations is known or fixed

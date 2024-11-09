@@ -1,19 +1,35 @@
 {% extends "base.html" %}
-
+{% set page_id = "data_sets" %}
+{% block header_button %}
+    <button onclick="markAsComplete('data_sets')" id="btn-data_sets">Mark Completed</button><br>                        
+{% endblock %}
 {% block content %}
 
+<h3 class="text-center"><i class="fas fa-database"></i>I can construct, refine, and interrogate data sets within tables, charts, spreadsheets, and databases to test or support an investigation.</h3>
+<h4 style="color: #E67E22;">Data Sets</h4>
+Data sets are organised collections of related information that can help us anseer questions or support investigations.<br>
+Data can be stored and displayed in various formats, such as:
 <ul>
-    <li>tables</li>
-    <li>charts</li>
-    <li>databases</li>
-    <li>spreadsheets</li>
+    <li>Tables</li>
+    <li>Charts</li>
+    <li>Databases</li>
+    <li>Spreadsheets</li>
 </ul>
 
+<h4 style="color: #E67E22;">Activities</h4>
+<ol class="list-group list-group-numbered">
+    <li class="list-group-item"><strong>Construct</strong> a data set. Collect and organise data to answer specific questions.</li>
+    <li class="list-group-item"><strong>Refine</strong> the data set. Check the data set for accuracy in spelling and format (e.g. integers, whole numbers).
+        Identify any missing or incorrect entries. Consider additional categories or removing unecessary categories for clear and accurate data.<br>
+    </li>
+    <li class="list-group-item"><strong>Interrogate</strong> the data set. Encourage curiousity and ask questions about the data set, such as 
+        "What is the highest/lowest value?" and "What patterns can we see?"</li>
+</ol>
+
+Use digital tools like Google Sheets or Excel to build data sets. Apply simple formulae to summarise data.
+Display the data set through bar graphs or pie charts to visually interpet the information from the data.
+This can help spot trends and patterns more clearly.
+
 <img src="{{ url_for('static', filename='images/bubble_sort.png') }}" alt="Bubble Sort" class="section-image">
-
-STEP 3
-
-I can construct, refine, and interrogate data sets within tables, charts, spreadsheets, and databases to test or support an investigation.
-
 
 {% endblock %}

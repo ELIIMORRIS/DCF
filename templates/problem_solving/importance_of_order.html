@@ -1,6 +1,16 @@
 {% extends "base.html" %}
-
+{% set page_id = "importance_of_order" %}
+{% block header_button %}
+    <button onclick="markAsComplete('importance_of_order')" id="btn-importance_of_order">Mark Completed</button>
+{% endblock %}
 {% block content %}
+<main>
+    <section>
+        <h3 class="text-center"><i class="fa-solid fa-sort"></i>I can understand the importance of the order of statements within algorithms.</h3>
+            <h4 style="color: #008A55;">Activities</h4>
+            The sequence of steps in an algorithm is critical for achieveing the desired outcome.
+            
+
 <div class="container">
     <h2>Interactive Sequencing Game: Getting Ready for School</h2>
     <p>Drag the steps from the left and drop them in the correct order on the right.</p>

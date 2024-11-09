@@ -1,6 +1,29 @@
 {% extends "base.html" %}
-
+{% set page_id = "evaluate_data" %}
+{% block header_button %}
+    <button onclick="markAsComplete('evaluate_data')" id="btn-evaluate_data">Mark Completed</button>    
+{% endblock %}                    
 {% block content %}
 
-I can extract and evaluate information from tables and graphs to answer questions.
+<h3 class="text-center"><i class="fas fa-chart-bar"></i>I can extract and evaluate information from tables and graphs to answer questions.</h3>
+<h4 style="color: #E67E22;">Understanding Data</h4>
+Accurate data is essential. Real-world data errors and their consequences.<br>
+Identify data types<br>
+Data can be categorical or numerical.<br>
+Elements in graphs and tables:<br>
+information from titles, labels, units and legends/keys.<br>
+<h4 style="color: #E67E22;">Extracting Information</h4>
+From tables, examine headers for ach column and row.<br>
+From graphs, identify details from x-axis and y-axis to understand what is being measured.<br>
+Identify trends over time, highest and lowest values, and comparisons between groups.<br>
+Identify outliers or irregulairites, that can lead to interesting insifhts or require futher investigation.<br>
+<h4 style="color: #E67E22;">Evaluating Information</h4>
+Interpret trends, use specific data point to answer questions, evaluate reliability considering the source and context of the data.<br>
+
+
+
+
+<h4 style="color: #E67E22;">Activities</h4>
+Present a data set with intentional errors or irrelevant entries, the task is to identy these issues.<br>
+
 {% endblock %}

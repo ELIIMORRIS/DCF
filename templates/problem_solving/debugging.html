@@ -1,14 +1,29 @@
 {% extends "base.html" %}
-
+{% set page_id = "debugging" %}
+{% block header_button %}
+    <button onclick="markAsComplete('debugging')" id="btn-debugging">Mark Completed</button>
+{% endblock %}
 {% block content %}
-<h1><i class="fa-solid fa-bug"></i></h1>
-Identify and correct errors in instructions.
-I can detect and correct mistakes which cause instructions (a solution) to fail (debug).
-<li>Play "Simon Says" with a twist: Include some intentional mistakes in the
+<main>
+    <section>
+        <h3 class="text-center"><i class="fa-solid fa-bug"></i>I can detect and correct mistakes which cause instructions (a solution) to fail (debug).</h3>
+        <p>Debugging is an essential skill in problem-solving and <a href="{{ url_for('computational_thinking') }}">computational thinking.</a>
+        It involves identifying errors in instructions, analysing their causes and making corrections to ensure that a solution works as intended.<br>
+        Here is a structured approach to help <span class="fw-bold" data-bs-toggle="tooltip" title="debug">detect and correct mistakes</span> in various contexts:<br>
+        <strong>1. Understand the problem<br>
+        2. Before debugging clarify what the expected outcome should be.<br>
+        3. Run the instructions and carefully note where and how the issue occurs.</strong><br></p>
+    </section>
+    <section>
+        <h4 style="color: #008A55;">Activities</h4>
+    <h5>Identify and correct errors in instructions.</h5>
+        <li>Play "Simon Says" with a twist: Include some intentional mistakes in the
     instructions and see if students can spot and correct them.</li>
-    <li>Give students a set of jumbled instructions for a simple task (e.g.,
+        <li>Give students a set of jumbled instructions for a simple task (e.g.,
         making a sandwich, building a LEGO model). Have them put the instructions in the correct
         order and then follow them.</li>
-
-        
+        Simple coding blocks like Scratch, intentionally insert errors for students to identify and correct
+        <p>Mistakes are part of the learning proces</p>
+    </section>
+</main>
 {% endblock %}

@@ -1,7 +1,7 @@
-from flask import Flask, render_template, send_from_directory, abort
+from flask import Flask, render_template, send_from_directory, abort, request
 from flask_sqlalchemy import SQLAlchemy
 import os
-from models import db, LessonActivity, UserProgress  # Import models
+from models import db, Criteria
 
 app = Flask(__name__)
 
@@ -19,6 +19,7 @@ with app.app_context():
 # Centralised headers dictionary
 headers = {
     'home': "Data and Computational Thinking",
+    'glossary': "Glossary",
     'computational_thinking': "Computational Thinking",
     'data_format': "Formatting Data",
     'evaluate_data': "Extract and Evaluate Information from Data",
@@ -26,7 +27,7 @@ headers = {
     'spreadsheet_formulae': "Spreadsheet Formulae",
     'break_down_a_problem': "Decomposition: Break Down a Problem",
     'debugging': "Debugging: Detect and Correct Mistakes",
-    'instructions_test_ideas': "Create + Record Instructions to Test Ideas",
+    'instructions_test_ideas': "Create and Record Instructions to Test Ideas",
     'instructions_change': "Change Instructions to Achieve a Different Outcome",
     'identify_repetitions': "Identify Repetitions in a Sequence",
     'refining_algorithms': "Refining Algorithms",
@@ -43,6 +44,19 @@ def inject_headers():
 @app.route('/')
 def home():
     return render_template('index.html', header=headers['home'])
+
+@app.route('/glossary')
+def glossary():
+    glossary_terms = {
+        'Algorithm': 'A step-by-step procedure for solving a problem or accomplishing a task.',
+        'Debug': 'The process of identifying and fixing bugs or errors in a program.',
+        'Iteration': 'Repeating a set of instructions or steps a certain number of times or until a condition is met.',
+        'Prototype': 'An early sample or model of a product used to test concepts or processes.',
+        'Computational Thinking': 'A problem-solving process that involves decomposition, pattern recognition, abstraction, and algorithm design.',
+        'Decomposition': 'Breaking down a complex problem into smaller, more manageable parts.',
+        'Abstraction': 'The process of simplifying complex systems by focusing on the important details and ignoring the irrelevant ones.'
+    }
+    return render_template('glossary.html', glossary=glossary_terms)
 
 # Route for each topic page.  trailing slash '/url/' added for following. if URL accessed w/o trailing slash, Flask will redirect to the canonical URL with the trailing slash
 @app.route('/data_literacy/data_format')
@@ -108,10 +122,38 @@ def download_file(filename):
 def resources():
     return render_template('resources.html', header=headers['resources'])
 
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    keyword = request.args.get('keyword', '').strip()
+    dcf_element = request.args.get('dcf_element', '').strip()
+    progression_step = request.args.get('progression_step', '').strip()
+
+    # Start with base query
+    query = Criteria.query
+
+    # Apply filters if values are provided
+    if keyword:
+        query = query.filter(
+            Criteria.title.contains(keyword) |
+            Criteria.description.contains(keyword)
+        )
+    if dcf_element:
+        query = query.filter_by(dcf_element=dcf_element)
+    if progression_step:
+        query = query.filter_by(progression_step=progression_step)
+    
+    # Fetch filtered activities
+    filtered_activities = query.all()
+    
+    return render_template('activities.html', activities=filtered_activities)
+
 @app.route('/activities')
 def activities():
-    all_activities = LessonActivity.query.all()
+    all_activities = Criteria.query.all()
     return render_template('activities.html', activities=all_activities)
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 if __name__ == '__main__':
     app.run(debug=True)
