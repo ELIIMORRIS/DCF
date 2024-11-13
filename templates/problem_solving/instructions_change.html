@@ -4,25 +4,68 @@
     <button onclick="markAsComplete('instructions_change')" id="btn-instructions_change">Mark Completed</button>
 {% endblock %}
 {% block content %}
-<h3 class="text-center"><i class="fa-solid fa-up-down-left-right"></i>I can change instructions to achieve a different outcome.</h3>
-<h1></i>Instructions</h1>
-<i class="fa-solid fa-compass"></i>Giving directions in different forms. <i class="fa-solid fa-compass"></i>
-    <p><i class="fa-solid fa-up-down"></i>Up or North
-    Down or South</p>
-    <p><i class="fa-solid fa-right-left"></i>
-    Left or West
-    Right or East</p>
-    <img src="{{ url_for('static', filename='images/change_instructions.png') }}" alt="Instructions" class="section-image">
-    <br>
-    <h1>Iteration</h1>
-    <p> To repeat something, but each time implement a few changes.<br>
-        The method of trial-and-error with small changes each time in order to find a solution.<br>
-        “iterative” doesn’t mean just repetitive. “Iterative” involves repeating something, but building 
-        on the previous iteration.<br> 
-        So “allow, allow” is a repetition, but “allow, arrow” (like a “word ladder” puzzle) is an iteration.<br>
-        repeating a process or set of instructions again and again, each time applying it to the result of the previous stage.<br>
-    Source: https://www.merriam-webster.com/dictionary/iteration</p>
-    <p>Repeition with improvement can enhance results</p>
-
-    <img src="{{ url_for('static', filename='images/instruct_a_robot.png') }}" alt="Instruct a Robot" class="section-image">
+<main>
+    <section>
+        <h3 class="text-center"><i class="fa-solid fa-up-down-left-right"></i>I can change instructions to achieve a different outcome.</h3>
+        <p class="text-center">Encourage learners to experiment with and modify the steps in an algorithm to explore how different instructions impact the final outcome.</p>
+    </section>
+    <section>
+        <div class="container text-start">
+            <div class="row">
+                <div class="col"><h4 style="color: #008A55;">Mathematics</h4>
+                    <p>Order is important in maths.<br>
+                        PEMDAS/BODMAS: Parentheses, Exponents, Multiplication and Division, Addition and Subtraction:<br>
+                        Consider addition and multiplication.<br>
+                        1. 2 + 3 * 2<br>
+                        Following the order of operations, we do the multiplication first:<br>
+                        3 * 2 = 6<br>
+                        Then we add 2<br>
+                        2 + 6 = 8<br>
+                        2. (2 + 3) * 2<br>
+                        The brackets/parenthese are done first<br>
+                        2 + 3 = 5<br>
+                        We then multiply by 2<br>
+                        5 * 2 = 10
+                    </p>
+                </div> 
+                <div class="col"><h4 style="color: #008A55;">Iteration</h4>
+                    <p> To repeat something, but each time implement a few changes.<br>
+                        The method of trial-and-error with small changes each time in order to find a solution.<br>
+                        “iterative” doesn’t mean just repetitive. “Iterative” involves repeating something, but building 
+                        on the previous iteration.<br> 
+                        So “allow, allow” is a repetition, but “allow, arrow” (like a “word ladder” puzzle) is an iteration.<br>
+                        repeating a process or set of instructions again and again, each time applying it to the result of the previous stage.<br>
+                    Source: https://www.merriam-webster.com/dictionary/iteration
+                    Repeition with improvement can enhance results</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h4 class="text-center" style="color: #008A55;">Directions</h4>
+        <p class="text-center"><i class="fa-solid fa-compass"></i>Consider different ways of giving directions<i class="fa-solid fa-compass"></i><br>
+        <i class="fa-solid fa-up-down"></i>Is it more effective to say go Up or go North? In what situations? What about go Down or head South?<br>
+        <i class="fa-solid fa-right-left"></i>Turn Left or move West? Turn Right or head East?</p>
+        <div class="row">
+            <div class="col"><h4 style="color: #008A55;">The Shortest Path vs The Longest Path</h4>
+                <img src="{{ url_for('static', filename='images/change_instructions.png') }}" alt="Instrctions_to_treasure" class="section-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('{{ url_for('static', filename='images/change_instructions.png') }}')">
+            </div>
+            <div class="col"><h4 style="color: #008A55;">Instructing a Robot</h4>
+                <img src="{{ url_for('static', filename='images/instruct_a_robot.png') }}" alt="guide_the_robot" class="section-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('{{ url_for('static', filename='images/instruct_a_robot.png') }}')">
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="zoomedImage" src="" class="img-fluid" alt="Zoomed Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

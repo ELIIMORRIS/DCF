@@ -4,8 +4,37 @@
     <button onclick="markAsComplete('data_sets')" id="btn-data_sets">Mark Completed</button><br>                        
 {% endblock %}
 {% block content %}
+<main>
+    <section>
+        <h3 class="text-center"><i class="fas fa-database"></i>I can construct, refine, and interrogate data sets within tables, charts, spreadsheets, and databases to test or support an investigation.</h3>
+        <p class="text-center">The ability to construct, refine, and interrogate data sets is a crucial skill in both data literacy and computational thinking.
+            Here are some ways this competency can be developed:</p>
+    </section>
+    <section>
+        <ol class="list-group list-group-numbered">
+            <li class="list-group-item"><strong>Constructing Data Sets</strong><br>
+            </li>
+            <li class="list-group-item"><strong>Refining Data Sets</strong><br>
+                <p>Cleaning Data: Students can learn how to refine raw data by identifying errors, missing values, or inconsistencies. 
+                    This might involve using tools like Excel’s “Find and Replace” or more advanced features like data validation.<br>
+                    Data Transformation: Teachers can demonstrate techniques for transforming data into more usable formats, such as converting text to numbers, normalizing data, or sorting values.
+                </p>
+            </li>
+            <li class="list-group-item"><strong>Interrogating Data Sets</strong><br>
+                <p>Data Analysis: Encourage students to explore data through basic statistical analysis, 
+                    such as calculating averages, medians, and mode, or creating charts and graphs to visualize patterns.<br>
+                    Creating Charts and Graphs: Teach students how to use software tools like spreadsheets or online chart creators to present data visually. 
+                    They can create bar charts, line graphs, or pie charts to represent their findings.
+                </p>
+            </li>
+        </ol>
+    </section>
+                
+                Data Collection: Teachers can introduce students to methods for gathering data, whether from surveys, experiments, or external data sources like websites or open datasets.
+Creating Tables: Teachers can guide students in organizing data into structured tables, ensuring the inclusion of headers and consistent formats. Spreadsheet software like Excel or Google Sheets can help students develop this skill.
+Data Collection: Teachers can introduce students to methods for gathering data, whether from surveys, experiments, or external data sources like websites or open datasets.
+Creating Tables: Teachers can guide students in organizing data into structured tables, ensuring the inclusion of headers and consistent formats. Spreadsheet software like Excel or Google Sheets can help students develop this skill.
 
-<h3 class="text-center"><i class="fas fa-database"></i>I can construct, refine, and interrogate data sets within tables, charts, spreadsheets, and databases to test or support an investigation.</h3>
 <h4 style="color: #E67E22;">Data Sets</h4>
 Data sets are organised collections of related information that can help us anseer questions or support investigations.<br>
 Data can be stored and displayed in various formats, such as:
@@ -29,7 +58,5 @@ Data can be stored and displayed in various formats, such as:
 Use digital tools like Google Sheets or Excel to build data sets. Apply simple formulae to summarise data.
 Display the data set through bar graphs or pie charts to visually interpet the information from the data.
 This can help spot trends and patterns more clearly.
-
-<img src="{{ url_for('static', filename='images/bubble_sort.png') }}" alt="Bubble Sort" class="section-image">
 
 {% endblock %}

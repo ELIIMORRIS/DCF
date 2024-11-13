@@ -1,6 +1,8 @@
 from flask import Flask, render_template, send_from_directory, abort, request
 from flask_sqlalchemy import SQLAlchemy
 import os
+
+from jinja2 import TemplateNotFound
 from models import db, Criteria
 
 app = Flask(__name__)
@@ -54,7 +56,10 @@ def glossary():
         'Prototype': 'An early sample or model of a product used to test concepts or processes.',
         'Computational Thinking': 'A problem-solving process that involves decomposition, pattern recognition, abstraction, and algorithm design.',
         'Decomposition': 'Breaking down a complex problem into smaller, more manageable parts.',
-        'Abstraction': 'The process of simplifying complex systems by focusing on the important details and ignoring the irrelevant ones.'
+        'Abstraction': 'The process of simplifying complex systems by focusing on the important details and ignoring the irrelevant ones.',
+        'Recursion': 'Breaking a component down into smaller components using the same function e.g. Imagine telling a story where each part contains a shorter version of the same story, getting simpler each time until it reaches the ending.',
+        'Pseudocode': 'A simple way of describing a set of instructions that does not have to use specific syntax i.e. can be written in plain English.',
+        'Variable': 'A named container for a particular value or piece of data.'
     }
     return render_template('glossary.html', glossary=glossary_terms)
 
@@ -122,38 +127,34 @@ def download_file(filename):
 def resources():
     return render_template('resources.html', header=headers['resources'])
 
-@app.route('/search', methods=['GET', 'POST'])
-def search():
-    keyword = request.args.get('keyword', '').strip()
-    dcf_element = request.args.get('dcf_element', '').strip()
-    progression_step = request.args.get('progression_step', '').strip()
-
-    # Start with base query
-    query = Criteria.query
-
-    # Apply filters if values are provided
-    if keyword:
-        query = query.filter(
-            Criteria.title.contains(keyword) |
-            Criteria.description.contains(keyword)
-        )
-    if dcf_element:
-        query = query.filter_by(dcf_element=dcf_element)
-    if progression_step:
-        query = query.filter_by(progression_step=progression_step)
-    
-    # Fetch filtered activities
-    filtered_activities = query.all()
-    
-    return render_template('activities.html', activities=filtered_activities)
-
-@app.route('/activities')
+@app.route('/activities', methods=['GET', 'POST'])
 def activities():
-    all_activities = Criteria.query.all()
-    return render_template('activities.html', activities=all_activities)
+    # Get search query from URL parameters, default to empty string if not provided
+    search_query = request.args.get('search', '')  
+    # Get filter query from URL parameters, default to empty string if not provided
+    filter_query = request.args.get('filter', '')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    # Start with a query to get all activities
+    activities = Criteria.query
+
+    # Apply search filter if search query is provided
+    if search_query:
+        activities = activities.filter(Criteria.title.contains(search_query))
+
+    # Apply filter if a filter query is provided
+    if filter_query:
+        activities = activities.filter(Criteria.dcf_element == filter_query)
+
+    # Get all the filtered activities
+    activities = activities.all()
+
+    # Pass filtered activities to the template for rendering
+    return render_template('activities.html', activities=activities)
+
+@app.route('/<string:dcf_element>/<string:template_name>')
+def activity_detail(dcf_element, template_name):
+    activity = Criteria.query.filter_by(template_name=template_name).first_or_404()
+    return render_template(f'{dcf_element}/{template_name}.html', activity=activity)
 
 if __name__ == '__main__':
     app.run(debug=True)

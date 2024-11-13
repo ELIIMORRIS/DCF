@@ -77,3 +77,8 @@ function clearCode() {
     editor.innerHTML = "<h5>Drop Code Here</h5>"; // Reset the editor content
     document.getElementById("output").innerHTML = ""; // Clear the output area
 }
+
+function showImage(imageUrl) {
+    // Update the source of the zoomed image
+    document.getElementById('zoomedImage').src = imageUrl;
+  }

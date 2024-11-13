@@ -1,41 +1,61 @@
 {% extends "base.html" %}
 {% block title %}Computational Thinking{% endblock %}
 {% block content %}
-    <main>
-        <h4 class="text-center"style="color: #e523ffea;"><i class="fa-solid fa-laptop-code"></i>Computational Thinking is a combination of 
-            scientific enquiry, problem-solving, and thinking skills.</h4>
-        <section>
-            <div class="card">
-                <h2>Computational Thinking skills</h2>
-                <ul>
-                    <li><strong>Abstraction:</strong> Simplifying complex problems by focusing on the relevant details.</li>
-                    <li><strong><a href="http://127.0.0.1:5000/problem_solving/break_down_a_problem"target="_blank">Decomposition</a>:</strong>Breaking a problem into smaller, manageable parts.</li>
-                    <li><strong>Pattern Recognition:</strong> Identifying similarities or patterns in data.</li>
-                    <li><strong>Algorithm Design:</strong> Creating a step-by-step solution to a problem.</li>
-                </ul>
+<main class="container mt-4">
+    <h4 class="text-center mb-4" style="color: #6f42c1;">
+        <i class="fa-solid fa-laptop-code"></i> Computational Thinking is a combination of problem-solving, scientific enquiry, and thinking skills.
+    </h4>
+    <section>
+        <!-- Computational Thinking Skills Section -->
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2>Computational Thinking skills</h2>
+                        <ul>
+                            <li><strong>Abstraction:</strong> Simplifying complex problems by focusing on the relevant details.</li>
+                            <li><strong><a href="{{ url_for('break_down_a_problem') }}">Decomposition</a>:</strong> Breaking a problem into smaller, manageable parts.</li>
+                            <li><strong><a href="{{ url_for('identify_repetitions') }}">Pattern Recognition:</a></strong> Identifying similarities or patterns in data.</li>
+                            <li><strong><a href="{{ url_for('refining_algorithms') }}">Algorithm Design:</a></strong> Creating a step-by-step solution to a problem.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-                Computational thinking 
-                Before learners can use computers to solve problems, they must first understand the problem and the methods of solving them. 
-                Through these elements, learners will understand the importance of data and information literacy, and they will explore aspects of collection, representation, and analysis. 
-                Learners will look at how data and information links into our digital world and will provide them with essential skills for the modern, dynamic workplace.
-            </p>
-            <div class="video-container">
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/T0ZwWbnxabI" 
-                    title="Computational Thinking with Technocamps" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+
+            <!-- Description Section -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <p>Computational thinking is a key component of the <a href="https://hwb.gov.wales/curriculum-for-wales/cross-curricular-skills-frameworks/digital-competence-framework" target="_blank" class="text-primary">Digital Competency Framework (DCF)</a>.</p>
+                        <p>Before learners can use computers to solve problems, they must first understand the problem and the methods of solving them. Through these elements, learners will understand the importance of data and information literacy, and they will explore aspects of collection, representation, and analysis.</p>
+                        <p>These skills will prepare learners for the digital world and provide essential skills for the modern, dynamic workplace.</p>
+                    </div>
+                </div>
             </div>
-        </section>
-        <section>
-            <!-- Button to download the PDF -->
-            <a href="{{ url_for('download_file', filename='Barefoot_guide_to_computational_thinking.pdf') }}" class="btn btn-primary" download> 
-                Download Computational Thinking Guide
-            </a>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="text-center mt-4">
+        <h4>Learn More About Computational Thinking</h4>
+        <div class="video-container mb-4">
+            <iframe 
+                width="100%" 
+                height="315" 
+                src="https://www.youtube.com/embed/T0ZwWbnxabI" 
+                title="Computational Thinking with Technocamps" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Download Button Section -->
+    <section class="text-center mt-4">
+        <a href="{{ url_for('download_file', filename='Barefoot_guide_to_computational_thinking.pdf') }}" class="btn btn-primary btn-lg" download>
+            Download Computational Thinking Guide
+        </a>
+    </section>
+</main>
 {% endblock %}

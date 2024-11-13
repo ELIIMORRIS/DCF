@@ -1,19 +1,22 @@
 {% extends "base.html" %}
+
 {% block content %}
     <h1>Search Activities</h1>
+
     <!-- Search Form with pre-filled values -->
-    <form action="{{ url_for('search') }}" method="get">
+    <form action="{{ url_for('activities') }}" method="get">
         <div class="form-group">
-            <label for="keyword">Keyword:</label>
-            <input type="text" class="form-control" name="keyword" id="keyword" value="{{ request.args.get('keyword', '') }}" placeholder="Search by title or description">
+            <label for="search">Keyword:</label>
+            <input type="text" class="form-control" name="search" id="search" value="{{ request.args.get('search', '') }}" placeholder="Search by title or description">
         </div>
 
         <div class="form-group">
-            <label for="dcf_element">DCF Element:</label>
-            <select name="dcf_element" class="form-control">
+            <label for="filter">DCF Element:</label>
+            <select name="filter" class="form-control">
                 <option value="">All</option>
-                <option value="Data and Information Literacy" {% if request.args.get('dcf_element') == 'Data and Information Literacy' %}selected{% endif %}>Data and Information Literacy</option>
-                <option value="Problem-Solving and Modelling" {% if request.args.get('dcf_element') == 'Problem-Solving and Modelling' %}selected{% endif %}>Problem-Solving and Modelling</option>
+                <option value="Data and Information Literacy" {% if request.args.get('filter') == 'Data and Information Literacy' %}selected{% endif %}>Data and Information Literacy</option>
+                <option value="Problem Solving and Modelling" {% if request.args.get('filter') == 'Problem Solving and Modelling' %}selected{% endif %}>Problem Solving and Modelling</option>
+                <!-- Add more options here as needed -->
             </select>
         </div>
 
@@ -25,6 +28,7 @@
                 <option value="Step 3" {% if request.args.get('progression_step') == 'Step 3' %}selected{% endif %}>Step 3</option>
             </select>
         </div>
+
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
 
@@ -34,9 +38,12 @@
         <ul class="list-group">
             {% for activity in activities %}
                 <li class="list-group-item">
-                    <h3>{{ activity.title }}</h3>
-                    <p>{{ activity.description }}</p>
-                    <small><strong>DCF Element:</strong> {{ activity.dcf_element }} | <strong>Progression Step:</strong> {{ activity.progression_step }}</small>
+                    <h3>
+                        <a href="{{ url_for('activity_detail', dcf_element=activity.dcf_element, template_name=activity.template_name) }}">
+                            {{ activity.title }} <!-- Display the title of the activity -->
+                        </a>                        
+                    </h3>
+                    <p>{{ activity.dcf_element }} - Progression Step: {{ activity.progression_step }}</p> <!-- Display DCF element and progression step -->
                 </li>
             {% endfor %}
         </ul>

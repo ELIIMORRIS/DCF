@@ -1,74 +1,109 @@
 {% extends "base.html" %}
 {% set page_id = "data_format" %}
 {% block header_button %}
-  <button onclick="markAsComplete('data_format')" id="btn-data_format">Mark Completed</button>
+  <button onclick="markAsComplete('data_format')" id="btn-data_format">Mark as Complete</button>
 {% endblock %}
-
 {% block content %}
-<h3 class="text-center"><i class="fas fa-table"></i>I can collect, enter, organise, and analyse data into different groups or formats, e.g., tables, charts, databases, and spreadsheets.</h3>
-Formatting data is a foundational skill for data literacy.<br>
-Collecting data:<br>
-Before collecting data, define the purpose. Are there specific questions want to answer or patterns to uncover?<br>
-Is data being gathered from primary sources e.g. surveys, or secondary sources e.g. database<br>
-Esnure consistent units, formats and data types are bieng used.<br>
+<main>
+  <section>
+    <h3 class="text-center"><i class="fas fa-table"></i>I can collect, enter, organize, and analyze data into different groups or formats, 
+      e.g., tables, charts, databases, and spreadsheets.</h3>
+      <p class="text-center">Formatting data is a foundational skill for data literacy.</p>
+  </section>
+  <section>
+    <div class="container text-start">
+      <div class="row">
+          <div class="col-md-6">
+            <p>Data can be:</p>
+            <ul>
+              <li>Descriptive (e.g., "high" or "fast")</li>
+              <li>Numerical</li>
+            </ul>
+            <p>Numerical data can be:</p>
+            <ul>
+              <li>Discrete – counted (e.g., number of students)</li>
+              <li>Continuous – measured (e.g., temperature)</li>
+            </ul>
+            <p><small>Source: <a href="https://www.mathsisfun.com/data/data-discrete-continuous.html" target="_blank">Math Is Fun</a></small></p>
+          </div>
+          <div class="col-md-6">
+            <h4 style="color: #E67E22;">Qualitative vs. Quantitative Data</h4>
+            <p>Data can be:</p>
+            <ul>
+              <li>Qualitative – descriptive information (describes something)</li>
+              <li>Quantitative – numerical information (numbers)</li>
+            </ul>
+
+            <h4 style="color: #E67E22;">Discrete vs. Continuous Data</h4>
+            <p><small>Source: <a href="https://www.bbc.co.uk/bitesize/articles/zxkh6g8#zm7vf82" target="_blank">BBC Bitesize</a></small></p>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+
+
+
+<h4>Collecting Data</h4>
+<p>Before collecting data, define the purpose: What questions are you trying to answer, or what patterns do you want to uncover?</p>
+<p>Data sources can be:</p>
+<ul>
+  <li>Primary (e.g., surveys)</li>
+  <li>Secondary (e.g., databases)</li>
+</ul>
+<p>Ensure consistent units, formats, and data types are used.</p>
+
 <div class="container text-start">
-    <div class="row">
-      <div class="col"><h5 style="color: #E67E22;">Tables</h5>
-        Tables present information or data using horizontal rows and vertical columns.
-Each row and column represents a specific category, labelled at the top of each column and on the left-hand side of each row.
-Tables are made up of cells.<br>
-Common examples of tables are:<br>
-Timetable for trains.<br>
-Class register.<br>
-Create a timetable for lessons.<br>
-
+  <div class="row">
+    <div class="col">
+      <h5 style="color: #E67E22;">Tables</h5>
+      <p>Tables present information using rows and columns, with labels at the top of each column and the left-hand side of each row. Examples include:</p>
+      <ul>
+        <li>Train timetables</li>
+        <li>Class registers</li>
+        <li>Lesson schedules</li>
+      </ul>
     </div>
-      <div class="col"><h5 style="color: #E67E22;">Charts and Graphs</h5>
-        Pie Chart<br>
-Pie charts are especially useful for displaying the contrast in 2 categories e.g. yes or no, true or false.
-It is easier to judge which slice is bigger when there are inky 2 slices to compare.<br>
-Good for illustarting parts of a whole.<br>
-Bar Chart<br>
-Bar charts are an effective way of visualising and comparing quantities across categories.<br>
-Y-axis is vertical, X-axis is horizontal.<br>
-Line Graph<br>
-
-Tally Chart<br>
-A way of collecting information using tallies.
+    <div class="col">
+      <h5 style="color: #E67E22;">Charts and Graphs</h5>
+      <p><strong>Pie Chart:</strong> Useful for showing contrasts in two categories, especially with only two slices.</p>
+      <p><strong>Bar Chart:</strong> Effective for comparing quantities across categories, with Y-axis vertical and X-axis horizontal.</p>
+      <p><strong>Line Graph:</strong> Excellent for showing changes over time.</p>
+      <p><strong>Tally Chart:</strong> A method for collecting information using tallies.</p>
     </div>
-      <div class="col"><h5 style="color: #E67E22;">Databases</h5>
-        Databases are a form of recording information in an organised way.<br>
-    See more here <a href="https://www.stem.org.uk/resources/elibrary/resource/398164/databases-unplugged"target="_blank">Databases unplugged</a></div>
-      <div class="col"><h5 style="color: #E67E22;">Spreadsheets</h5>
-      Spreadsheets are versatile for basic analysis, including data sorting, filtering and simple calculations.<br>
-    Formulas and functions enhance analysis capabilities.</div> 
+    <div class="col">
+      <h5 style="color: #E67E22;">Databases</h5>
+      <p>Databases store information in an organized way.</p>
+      <p><small>See more: <a href="https://www.stem.org.uk/resources/elibrary/resource/398164/databases-unplugged" target="_blank">Databases Unplugged</a></small></p>
     </div>
+    <div class="col">
+      <h5 style="color: #E67E22;">Spreadsheets</h5>
+      <p>Spreadsheets are useful for data sorting, filtering, and basic calculations, enhanced by formulas and functions for analysis.</p>
+    </div>
+  </div>
+</div>
 
-    <div class="text-start">
-    <h4 style="color: #E67E22;">Activities</h4>
-    <ol class="list-group list-group-numbered">
-        <li class="list-group-item">Conduct a class survey about...</li>
-        <li class="list-group-item">Enter and record this information in a table or database</li>
-        <li class="list-group-item">Organise and analyse this data into different categories</li>
-        <li class="list-group-item">Discuss why it is useful to collect and organise data and information in this way</li>
-        <li class="list-group-item">Present this information in a bar graph or pie chart. Discuss how we can better understand patterns and trends through visualising the information behind the numbers</li>
-    </ol>
+<div class="text-start">
+  <h4 style="color: #E67E22;">Activities</h4>
+  <ol class="list-group list-group-numbered">
+    <li class="list-group-item">Conduct a class survey on a topic.</li>
+    <li class="list-group-item">Record the data in a table or database.</li>
+    <li class="list-group-item">Organize and analyze the data into categories.</li>
+    <li class="list-group-item">Discuss why collecting and organizing data is useful.</li>
+    <li class="list-group-item">Present the data in a bar or pie chart to illustrate patterns and trends.</li>
+  </ol>
+</div>
 
 <h5 style="color: #E67E22;">Graphs</h5>
-Graphs are graphical representations that provide a visual way to understand and analyse data, 
-showing the relationship between two or more 
-<span class="fw-bold" data-bs-toggle="tooltip" title="values that we can assign and define">variables.</span>
-Line Graphs are an excellent way to demonstrate change over time.
-
+<p>Graphs visually represent data, allowing for analysis of relationships between two or more variables. Line graphs, for example, are ideal for showing change over time.</p>
 
 <h4 style="color: #E67E22;">Analysis</h4>
-Compare and contract data across different formats to see how data trends are shown in various representations.<br>
-Interpret the results in each format to draw informed conclusions. Look for patterns, outliers or trends that answer intitial questions.<br>
-Documen findings, record obeservationsa dn insights.
-
-
+<p>Compare and contrast data across formats to observe trends, patterns, and outliers. Interpret results in each format and document your findings, observations, and insights.</p>
 
 <h4 style="color: #E67E22;">Resources</h4>
-<a href="https://www.stem.org.uk/resources/community/collection/12744/years-3-4-data-and-statistics"target="_blank">Data and Statistics</a>
-<a href="https://www.csfieldguide.org.nz/en/interactives/data-visualisation/"target="_blank">Find the most common number</a>
+<p>
+  <a href="https://www.stem.org.uk/resources/community/collection/12744/years-3-4-data-and-statistics" target="_blank">Data and Statistics</a><br>
+  <a href="https://www.csfieldguide.org.nz/en/interactives/data-visualisation/" target="_blank">Find the Most Common Number</a>
+</p>
 {% endblock %}

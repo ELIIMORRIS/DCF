@@ -7,24 +7,73 @@
 <main>
     <section>
         <h3 class="text-center"><i class="fa-solid fa-sort"></i>I can understand the importance of the order of statements within algorithms.</h3>
-            <h4 style="color: #008A55;">Activities</h4>
-            The sequence of steps in an algorithm is critical for achieveing the desired outcome.
-            
-
-<div class="container">
-    <h2>Interactive Sequencing Game: Getting Ready for School</h2>
-    <p>Drag the steps from the left and drop them in the correct order on the right.</p>
-    <div class="container">
-        <div class="list" id="list1">
-            <div class="item" draggable="true">Item 1</div>
-            <div class="item" draggable="true">Item 2</div>
-            <div class="item" draggable="true">Item 3</div>
+        <p class="text-center">The order of statements within an <span class="fw-bold" data-bs-toggle="tooltip" title="A step-by-step procedure for solving a problem or accomplishing a task">algorithm</span> 
+            is crucial because it directly affects the logic, efficiency, and correctness of the solution.</p>
+    </section>
+    <section>
+        <h3 class="text-center" style="color: #008A55;">Essential Concepts</h3>
+            <div class="row">
+                <div class="col">
+                    <h5 class="fw-bold">Correctness: Getting the Right Answer</h5>
+                    <u>Computational Thinking Concept: Algorithmic Thinking</u><br>
+                    Algorithmic thinking involves creating a sequence of steps that lead to the correct outcome.
+                    The correctness of an algorithm depends on ensuring that each statement is in the right order, 
+                    just as following the exact sequence in a recipe leads to the intended result. Teaching children about this emphasizes that 
+                    algorithms need a precise order to work correctly, reinforcing algorithmic thinking.<br>
+                    <h5 class="fw-bold">Flow of Control: Knowing What Happens Next</h5>
+                    <u>Computational Thinking Concept: Control Structures (a part of Algorithmic Thinking)</u><br>
+                    In computational thinking, control structures (like sequences, conditionals, and loops) direct the flow of an algorithm. 
+                    The order of statements affects whether the program follows the correct control path, such as checking the weather before deciding to go to the park. 
+                    This helps students understand how conditionals and sequence impact what the algorithm does next, strengthening their grasp of control flow in computational processes.
+                    Just like when you play a game and follow rules (like rolling the dice before moving your piece), in algorithms, the order of the steps controls what happens next.<br>
+                    <h5 class="fw-bold">What Comes First: Steps That Depend on Each Other</h5>
+                    <u>Computational Thinking Concept: Decomposition and Sequencing</u><br>
+                    Decomposition breaks down a problem into individual steps, while sequencing determines their order. 
+                    Just like building a Lego tower from the ground up, some steps rely on previous steps being completed correctly. 
+                    Understanding dependencies reinforces the importance of sequencing and decomposition in computational thinking, as students learn to build solutions step-by-step in the correct order.<br>
+                    </div>
+                <div class="col">
+                    <h5 class="fw-bold">Speed and Efficiency: Getting Things Done Faster</h5>
+                    <u>Computational Thinking Concept: Efficiency in Algorithmic Thinking and Abstraction</u><br>
+                    In computational thinking, efficiency relates to designing algorithms that reach a solution in the least amount of time or with the least amount of work. 
+                    Abstracting an algorithm means focusing only on the essential steps to minimize redundant or unnecessary actions, like sorting homework by subject first. 
+                    This connection to abstraction helps students appreciate efficiency and select the most effective order of operations.
+                    Sometimes, the order of steps can help you get to the answer faster, without doing unnecessary work.<br>
+                    <h5 class="fw-bold">Repeating Steps: When Things Happen Over and Over Again</h5>
+                    <u>Computational Thinking Concept: Iteration (a key aspect of Algorithmic Thinking)</u><br>
+                    Iteration in computational thinking involves repeating steps in a controlled way. 
+                    The correct order ensures that each repetition (like a loop) processes items in a structured way without skipping or duplicating steps. 
+                    When students use checklists, they’re practicing iteration by ensuring every item is handled in order. 
+                    This concept solidifies their understanding of loops and repetition structures in programming and algorithms.<br>
+                </div>
+            </div>
+        </div>            
+    </section>
+    <section>
+        <div class="row">
+            <div class="col"><h4 style="color: #008A55;">Sorting Data</h4>
+                <img src="{{ url_for('static', filename='images/sorting_data.png') }}" alt="sorting_data" class="section-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('{{ url_for('static', filename='images/sorting_data.png') }}')">
+            </div>
+            <div class="col"><h4 style="color: #008A55;">Bubble Sort</h4>
+                <img src="{{ url_for('static', filename='images/bubble_sort.png') }}" alt="bubble_sort" class="section-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('{{ url_for('static', filename='images/bubble_sort.png') }}')">
+            </div>
+            <div class="col"><h4 style="color: #008A55;">Insertion Sort</h4>
+                <img src="{{ url_for('static', filename='images/insertion_sort.png') }}" alt="insertion_sort" class="section-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('{{ url_for('static', filename='images/insertion_sort.png') }}')">
+            </div>
         </div>
-        <div class="list" id="list2">
-            <div class="item" draggable="true">Item 4</div>
-            <div class="item" draggable="true">Item 5</div>
-            <div class="item" draggable="true">Item 6</div>
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="zoomedImage" src="" class="img-fluid" alt="Zoomed Image">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
+    </section>
+</main>
 {% endblock %}

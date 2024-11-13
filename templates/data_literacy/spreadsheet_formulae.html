@@ -4,57 +4,71 @@
     <button onclick="markAsComplete('spreadsheet_formulae')" id="btn-spreadsheet_formulae">Mark Completed</button>
 {% endblock %}
 {% block content %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable@12.0.1/dist/handsontable.min.css">
+<script src="https://cdn.jsdelivr.net/npm/handsontable@12.0.1/dist/handsontable.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable@12.0.1/dist/handsontable.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/handsontable@12.0.1/dist/handsontable.min.js"></script>
-  <h3 class="text-center"><i class="fa-solid fa-file-excel"></i>I can use a range of spreadsheet formulae, e.g., +, -, /, x, sum, average, max, min.</h3>
-<h4 style="color: #E67E22;">Spreadsheet Formulae Demonstration</h4>
-  <div id="spreadsheet1"></div>
+<main>
+  <section class="text-center my-4">
+    <h3><i class="fa-solid fa-file-excel"></i> I can use a range of spreadsheet formulae, e.g., +, -, /, *, SUM, AVERAGE, MAX, MIN.</h3>
+    <p>Spreadsheets are essential tools for data analysis and visualization. They help students understand mathematical concepts and manage data in real-life contexts, 
+      such as budgeting or comparing product prices.</p>
+  </section>
 
-  <h2>Interactive Spreadsheet Formulae Demonstration</h2>
-  <div id="spreadsheet1"></div> <!-- First table container -->
+  <section>
+    <div class="container text-start">
+        <div class="row">
+            <div class="col-md-6">
+              <h4 style="color: #E67E22;">Spreadsheet Formulae</h4>
+                <ul>
+                  <li><code>+</code>, <code>-</code>, <code>/</code>, <code>*</code> - Basic arithmetic operations.</li>
+                  <li><code>SUM</code> - Adds up a range of cells. E.g., <code>=SUM(B2:B9)</code></li>
+                  <li><code>AVERAGE</code> - Calculates the average of a range. E.g., <code>=AVERAGE(C2:C9)</code></li>
+                  <li><code>MAX</code> - Finds the highest value. E.g., <code>=MAX(B2:B9)</code></li>
+                  <li><code>MIN</code> - Finds the lowest value. E.g., <code>=MIN(C2:C9)</code></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+              <h4 style="color: #E67E22;">Spreadsheet Formulae Demonstration</h4>
+              <div id="spreadsheet" class="my-3"></div>
+              <p>In this table, various arithmetic operations and common formulas are applied.</p>
+            </div>
+        </div>
+    </div>
+  </section>
 
-  <h2>Car Sales Data Table</h2>
-  <div id="spreadsheet2"></div> <!-- Second table container -->
-  <script>
-    const container = document.getElementById('spreadsheet');
+  <section class="text-center my-4">
+    <p>For a guide on introducing spreadsheets to primary students, visit 
+      <a href="https://www.attechedu.com/single-post/teaching-spreadsheets-a-guide-to-introducing-spreadsheets-to-primary-students" target="_blank">Teaching Spreadsheets: A Guide for Primary Students</a>.
+    </p>
+  </section>
+</main>
 
-    const hot = new Handsontable(container, {
-      data: [
-        ['Operation', 'Number 1', 'Number 2', 'Formula', 'Result'],
-        ['Addition', 10, 5, '=B2+C2', ''],                // Demonstrates +
-        ['Subtraction', 10, 5, '=B3-C3', ''],             // Demonstrates -
-        ['Multiplication', 10, 5, '=B4*C4', ''],          // Demonstrates *
-        ['Division', 10, 5, '=B5/C5', ''],                // Demonstrates 
-        ['Average', 10, 20, '=AVERAGE(B6:C6)', ''],       // Demonstrates AVERAGE
-        ['Max', 10, 20, '=MAX(B7:C7)', ''],               // Demonstrates MAX
-        ['Min', 10, 20, '=MIN(B8:C8)', ''],               // Demonstrates MIN
-        ['Sum', 10, 20, '=SUM(B9:C9)', ''],               // Demonstrates SUM
-      ],
-      rowHeaders: true,
-      colHeaders: true,
-      formulas: true,
-      height: 'auto',
-      autoWrapRow: true,
-      autoWrapCol: true,
-      licenseKey: 'non-commercial-and-evaluation',
-      afterChange: function(changes, source) {
-        if (source === 'edit') {
-          hot.render();
-        }
-      }
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const container = document.getElementById('spreadsheet');
+        
+        const data = [
+            ['Operation', 'Number 1', 'Number 2', 'Formula', 'Result'],
+            ['Addition', 10, 5, '=B2+C2', ''],
+            ['Subtraction', 10, 5, '=B3-C3', ''],
+            ['Multiplication', 10, 5, '=B4*C4', ''],
+            ['Division', 10, 5, '=B5/C5', ''],
+            ['Average', 10, 20, '=AVERAGE(B6:C6)', ''],
+            ['Max', 10, 20, '=MAX(B7:C7)', ''],
+            ['Min', 10, 20, '=MIN(B8:C8)', ''],
+            ['Sum', 10, 20, '=SUM(B9:C9)', '']
+        ];
+        
+        const hot = new Handsontable(container, {
+            data: data,
+            rowHeaders: true,
+            colHeaders: true,
+            contextMenu: true,
+            formulas: true,
+            height: 'auto',
+            licenseKey: 'non-commercial-and-evaluation'
+        });
     });
-  </script>
-
-
-
-Spreadhseet formulas are tools that can quickly process data.<br>
-
-Spreasheets is a generic term (not only Excel).<br>
-Spreadshetts can often make mathematics much easier as tehy do the caluclations for you, giving more time to understadn the mathematical concepts.<br>
-We can use spreadsheets for practical tasks like budgeting.
-
-https://www.attechedu.com/single-post/teaching-spreadsheets-a-guide-to-introducing-spreadsheets-to-primary-students
-
+</script>
 
 {% endblock %}
