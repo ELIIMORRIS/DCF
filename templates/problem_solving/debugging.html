@@ -7,23 +7,49 @@
 <main>
     <section>
         <h3 class="text-center"><i class="fa-solid fa-bug"></i>I can detect and correct mistakes which cause instructions (a solution) to fail (debug).</h3>
-        <p>Debugging is an essential skill in problem-solving and <a href="{{ url_for('computational_thinking') }}">computational thinking.</a>
-        It involves identifying errors in instructions, analysing their causes and making corrections to ensure that a solution works as intended.<br>
-        Here is a structured approach to help <span class="fw-bold" data-bs-toggle="tooltip" title="debug">detect and correct mistakes</span> in various contexts:<br>
-        <strong>1. Understand the problem<br>
-        2. Before debugging clarify what the expected outcome should be.<br>
-        3. Run the instructions and carefully note where and how the issue occurs.</strong><br></p>
+        <p class="text-center">Debugging is an essential skill in problem-solving and <a href="{{ url_for('computational_thinking') }}">computational thinking.</a>
+        It involves identifying errors in instructions, analysing their causes and making corrections to ensure that a solution works as intended.</p>
     </section>
     <section>
-        <h4 style="color: #008A55;">Activities</h4>
-        <h5>Identify and correct errors in instructions.</h5>
-        <li>Play "Simon Says" with a twist: Include some intentional mistakes in the
-    instructions and see if students can spot and correct them.</li>
-        <li>Give students a set of jumbled instructions for a simple task (e.g.,
-        making a sandwich, building a LEGO model). Have them put the instructions in the correct
-        order and then follow them.</li>
-        Simple coding blocks like Scratch, intentionally insert errors for students to identify and correct
-        <p>Mistakes are part of the learning proces</p>
+        <div class="container text-start">
+            <div class="row">
+                <div class="col"><h4 style="color: #008A55;">Approach</h4>
+                    Here is a structured approach to help <span class="fw-bold" data-bs-toggle="tooltip" title="debug">detect and correct mistakes</span> in various contexts:<br>
+                    <strong>1. Understand the problem</strong><br>
+                    What are we trying to do? What should the outcome look like?<br>
+                    <strong>2. Before debugging clarify what the expected outcome should be.</strong><br>
+                    What is the end goal?<br>
+                    <strong>3. Run the instructions and carefully note where and how the issue occurs.</strong><br>
+                    Test and observe to find the "bug"!
+                    <br>
+                    <i class="fa-solid fa-rocket"></i><b>It is important to remember that mistakes are part of the learning process.</b>
+                </div>
+                <div class="col"><h4 style="color: #008A55;">Interactive Debugging</h4>
+                    Arrange these steps to brush our teeth!<br>
+                    <div class="game-container">
+                        <div class="steps" id="steps">
+                            <div class="step" draggable="true" id="step4">Put toothbrush away</div>
+                            <div class="step" draggable="true" id="step1">Squeeze toothpaste onto your toothbrush</div>
+                            <div class="step" draggable="true" id="step3">Spit out toothpaste</div>
+                            <div class="step" draggable="true" id="step2">Start brushing your teeth for 2 minutes</div>
+                        </div>
+                        <div class="dropzone" id="dropzone">
+                            <p>Drop steps here in order!</p>
+                        </div>
+                    </div>
+                
+                    <button id="checkOrder">Check Order</button>
+                    <button id="resetGame">Reset</button>
+                    <p id="result"></p>
+
+                    Unplugged activities:<br>
+                    Play "Simon Says" with a twist. Include some intentional mistakes in the instructions and see if students can spot and correct them.<br>
+                </div>
+            </div> 
+        </div>   
+    </section>
+    <section>
+        Download these lesson packs from Barefoot Computing
     </section>
 </main>
 {% endblock %}

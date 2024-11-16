@@ -82,3 +82,68 @@ function showImage(imageUrl) {
     // Update the source of the zoomed image
     document.getElementById('zoomedImage').src = imageUrl;
   }
+
+// Select elements
+const steps = document.querySelectorAll('.step'); // Initial step elements
+const stepsContainer = document.getElementById('steps'); // Original container
+const dropzone = document.getElementById('dropzone'); // Dropzone container
+const checkOrderButton = document.getElementById('checkOrder'); // Check button
+const resetButton = document.getElementById('resetGame'); // Reset button
+const result = document.getElementById('result'); // Result display
+
+// Track the order of steps dropped
+let droppedSteps = [];
+
+// Enable dragging
+steps.forEach(step => {
+    step.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text', e.target.id);
+    });
+});
+
+// Allow dropping in the dropzone
+dropzone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+});
+
+dropzone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const stepId = e.dataTransfer.getData('text');
+    const stepElement = document.getElementById(stepId);
+
+    // Add step to the dropzone if not already there
+    if (!droppedSteps.includes(stepId)) {
+        droppedSteps.push(stepId);
+        dropzone.appendChild(stepElement);
+    }
+});
+
+// Check the order
+checkOrderButton.addEventListener('click', () => {
+    const correctOrder = ['step1', 'step2', 'step3', 'step4'];
+
+    if (JSON.stringify(droppedSteps) === JSON.stringify(correctOrder)) {
+        result.textContent = 'Yes! You have brushed your teeth in the right order!';
+        result.style.color = 'green';
+    } else {
+        result.textContent = 'Oops! Try again.';
+        result.style.color = 'red';
+    }
+});
+
+// Reset functionality
+resetButton.addEventListener('click', () => {
+    // Clear the dropzone
+    dropzone.innerHTML = '<p>Drop steps here in order!</p>';
+    
+    // Move all step elements back to the original container
+    steps.forEach(step => {
+        stepsContainer.appendChild(step);
+    });
+
+    // Reset the droppedSteps array
+    droppedSteps = [];
+
+    // Clear the result message
+    result.textContent = '';
+});
