@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory, abort, request
+from flask import Flask, render_template, send_from_directory, abort, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import os
 
@@ -16,7 +16,7 @@ db.init_app(app)
 
 # Create the database tables if they do not already exist
 with app.app_context():
-    db.create_all()  # This creates all tables defined in your models
+    db.create_all()  # This creates all tables defined in model
 
 # Centralised headers dictionary
 headers = {
@@ -127,34 +127,51 @@ def download_file(filename):
 def resources():
     return render_template('resources.html', header=headers['resources'])
 
-@app.route('/activities', methods=['GET', 'POST'])
-def activities():
-    # Get search query from URL parameters, default to empty string if not provided
-    search_query = request.args.get('search', '')  
-    # Get filter query from URL parameters, default to empty string if not provided
-    filter_query = request.args.get('filter', '')
-
-    # Start with a query to get all activities
-    activities = Criteria.query
-
-    # Apply search filter if search query is provided
-    if search_query:
-        activities = activities.filter(Criteria.title.contains(search_query))
-
-    # Apply filter if a filter query is provided
-    if filter_query:
-        activities = activities.filter(Criteria.dcf_element == filter_query)
-
-    # Get all the filtered activities
-    activities = activities.all()
-
-    # Pass filtered activities to the template for rendering
-    return render_template('activities.html', activities=activities)
-
+# Generic route for activity pages (data literacy, problem solving, etc.)
 @app.route('/<string:dcf_element>/<string:template_name>')
-def activity_detail(dcf_element, template_name):
-    activity = Criteria.query.filter_by(template_name=template_name).first_or_404()
-    return render_template(f'{dcf_element}/{template_name}.html', activity=activity)
+def activity_page(dcf_element, template_name):
+    try:
+        header = headers.get(template_name, "Activity")  # Default to "Activity" if not found
+        color = "#E67E22" if "data_literacy" in dcf_element else "#00AB66"  # Example color logic
+        return render_template(f'{dcf_element}/{template_name}.html', header=header, color=color)
+    except TemplateNotFound:
+        abort(404)
+
+# Search functionality
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    if request.method == 'POST':
+        search_term = request.form.get('search', '').strip()
+        if search_term:
+            results = Criteria.query.filter(
+                Criteria.title.ilike(f"%{search_term}%") |
+                Criteria.description.ilike(f"%{search_term}%")
+            ).all()
+            return render_template('search_results.html', results=results, search_term=search_term)
+    return redirect(url_for('home'))
+
+# Lesson detail route
+@app.route('/lesson/<template_name>')
+def lesson(template_name):
+    lesson = Criteria.query.filter_by(template_name=template_name).first()
+    if not lesson:
+        abort(404)
+    return render_template(f"{lesson.dcf_element}/{lesson.template_name}.html", lesson=lesson)
+
+# Activities route
+@app.route('/activities', methods=['GET'])
+def activities():
+    search_query = request.args.get('search', '').strip()
+    filter_query = request.args.get('filter', '').strip()
+    query = Criteria.query
+
+    if search_query:
+        query = query.filter(Criteria.title.contains(search_query))
+    if filter_query:
+        query = query.filter(Criteria.dcf_element == filter_query)
+
+    activities = query.all()
+    return render_template('activities.html', activities=activities)
 
 if __name__ == '__main__':
     app.run(debug=True)

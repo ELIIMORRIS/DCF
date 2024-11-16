@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
   });
   
 
-function markAsComplete(item) {
+  function markAsComplete(item) {
     localStorage.setItem(item, 'completed');
     const button = document.getElementById('btn-' + item);
     button.textContent = 'Completed';
