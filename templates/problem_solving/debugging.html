@@ -41,15 +41,26 @@
                     <button id="checkOrder">Check Order</button>
                     <button id="resetGame">Reset</button>
                     <p id="result"></p>
-
-                    Unplugged activities:<br>
-                    Play "Simon Says" with a twist. Include some intentional mistakes in the instructions and see if students can spot and correct them.<br>
                 </div>
-            </div> 
-        </div>   
+            </div>
+        </div>
     </section>
     <section>
-        Download these lesson packs from Barefoot Computing
+        <h4 style="color: #008A55;">Unplugged Activity</h4>            
+        Play "Simon Says" with a twist. Include some intentional mistakes in the instructions and see if students can spot and correct them.
     </section>
+        <!-- Download Section -->
+        <section class="text-center mt-4">
+            <h3>Download these lesson packs from Barefoot Computing:</h3><br>
+            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Teacher_Pack.pdf') }}" class="btn btn-primary btn-lg" download>
+                Debug Teacher Guide
+            </a>
+            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Activity.pdf') }}" class="btn btn-primary btn-lg" download>
+                Debug Presentation
+            </a>
+            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Worksheet.pdf') }}" class="btn btn-primary btn-lg" download>
+                Debug Worksheet
+            </a>
+        </section>
 </main>
 {% endblock %}
