@@ -6,51 +6,71 @@
 {% block content %}
 <main>
     <section>
-        <h3 class="text-center"><i class="fa-solid fa-up-down-left-right"></i>I can change instructions to achieve a different outcome.</h3>
+        <h3 class="text-center"><i class="fa-solid fa-sliders"></i> I can change instructions to achieve a different outcome.</h3>
         <p class="text-center">Encourage learners to experiment with and modify the steps in an algorithm to explore how different instructions impact the final outcome.</p>
     </section>
     <section>
         <div class="container text-start">
             <div class="row">
-                <div class="col"><h4 style="color: #008A55;">Mathematics</h4>
-                    <p>Order is important in maths.<br>
-                        PEMDAS/BODMAS: Parentheses, Exponents, Multiplication and Division, Addition and Subtraction:<br>
-                        Consider addition and multiplication.<br>
-                        1. 2 + 3 * 2<br>
+                <div class="col"><h4 style="color: #008A55;">Iteration: Improving Through Repetition</h4>
+                    <p>Use iteration to refine and improve solutions.<br>
+                        <b>Definition:</b><br>
+                        Iteration involves repeating a process while making incremental improvements based on prior results. 
+                        It's not mere repetition — each iteration builds on the last.<br>
+                        <b>Example</b><br>
+                        <b>Repetition:</b><br> 
+                        Typing the word "allow" repeatedly: "allow, allow, allow."<br>
+                        <b>Iteration:</b><br> 
+                        Typing variations that evolve: "allow, arrow, arrowhead."<br>
+
+                        <b>Activity:</b><br>
+                        Design a basic word ladder puzzle where learners must iteratively change one letter in a word to reach a target word<br> 
+                        (e.g., "cat" → "cot" → "dot" → "dog").<br>
+                        Use a flowchart or pseudo-code to demonstrate how iterative problem-solving works in programming.
+                </div>
+                <div class="col"><h4 style="color: #008A55;">Order in Mathematics: Understanding PEMDAS</h4>
+                    <p>The order of operations is important in mathematics.<br>
+                        <b>PEMDAS: Parentheses, Exponents, Multiplication and Division, Addition and Subtraction</b><br>
+                        Consider addition and multiplication in the following example.<br>
+                        <p class="text-center"><b>2 + 3 * 2</b></p>
                         Following the order of operations, we do the multiplication first:<br>
-                        3 * 2 = 6<br>
+                        <p class="text-center">So, Step One: 3 * 2 = 6<br>
                         Then we add 2<br>
-                        2 + 6 = 8<br>
-                        2. (2 + 3) * 2<br>
-                        The brackets/parenthese are done first<br>
-                        2 + 3 = 5<br>
-                        We then multiply by 2<br>
-                        5 * 2 = 10
+                        Step Two: 2 + 6 = 8</p>
+                        However, the order changes when brackets/parenthese are included<br>
+                        <p class="text-center"><b>(2 + 3) * 2</b></p>
+                        Now, the brackets/parenthese are done first<br>
+                        <p class="text-center">So, Step One: 2 + 3 = 5<br>
+                        Then, we multiply by 2<br>
+                        Step Two: 5 * 2 = 10</p>
+                        Two different results, using the same data, with different operations.
                     </p>
                 </div> 
-                <div class="col"><h4 style="color: #008A55;">Iteration</h4>
-                    <p> To repeat something, but each time implement a few changes.<br>
-                        The method of trial-and-error with small changes each time in order to find a solution.<br>
-                        “iterative” doesn’t mean just repetitive. “Iterative” involves repeating something, but building 
-                        on the previous iteration.<br> 
-                        So “allow, allow” is a repetition, but “allow, arrow” (like a “word ladder” puzzle) is an iteration.<br>
-                        repeating a process or set of instructions again and again, each time applying it to the result of the previous stage.<br>
-                    Source: https://www.merriam-webster.com/dictionary/iteration
-                    Repeition with improvement can enhance results</p>
-                </div>
             </div>
         </div>
     </section>
     <section>
-        <h4 class="text-center" style="color: #008A55;">Directions</h4>
-        <p class="text-center"><i class="fa-solid fa-compass"></i>Consider different ways of giving directions<i class="fa-solid fa-compass"></i><br>
-        <i class="fa-solid fa-up-down"></i>Is it more effective to say go Up or go North? In what situations? What about go Down or head South?<br>
-        <i class="fa-solid fa-right-left"></i>Turn Left or move West? Turn Right or head East?</p>
+        <h4 class="text-center" style="color: #008A55;">Directions: Evaluating Effectiveness</h4>
+        <p class="text-center"><i class="fa-solid fa-compass"></i> Experiment with different ways of giving instructions to understand effectiveness <i class="fa-solid fa-compass"></i><br>
+        <b>Scenario: Giving directions to a partner or robot.</b><br>
+        <i class="fa-solid fa-up-down"></i> Is it more effective to say "Move forward 3 steps" or "Go North 3 steps"?<br>
+        Discuss which method is clearer, in which situations e.g. indoors versus on a map.<br> 
+        <i class="fa-solid fa-right-left"></i> Turn Left or move West? Turn Right or head East?</p>
         <div class="row">
             <div class="col"><h4 style="color: #008A55;">The Shortest Path vs The Longest Path</h4>
+                <p>Find efficient or creative ways to solve navigation problems.<br>
+                <b>Activity:</b><br>
+                Shortest Path to Treasure: Give instructions to guide the arrow to the treasure in the shortest number of moves.<br>
+                Longest Path Challenge: Reverse the task, to maximize the distance traveled before reaching the treasure.</p>
                 <img src="{{ url_for('static', filename='images/change_instructions.png') }}" alt="Instrctions_to_treasure" class="section-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('{{ url_for('static', filename='images/change_instructions.png') }}')">
             </div>
             <div class="col"><h4 style="color: #008A55;">Instructing a Robot</h4>
+                <p>Find efficient or creative ways to solve navigation problems.<br>
+                    <b>Activity:</b><br>
+                    Consider how you would instruct a robot differently to a person.<br>
+                    How do robots think?<br>
+                    * HINT * Like a computer!<br>
+                    <br>
                 <img src="{{ url_for('static', filename='images/instruct_a_robot.png') }}" alt="guide_the_robot" class="section-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('{{ url_for('static', filename='images/instruct_a_robot.png') }}')">
             </div>
         </div>

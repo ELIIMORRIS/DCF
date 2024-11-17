@@ -4,34 +4,82 @@
     <button onclick="markAsComplete('evaluate_data')" id="btn-evaluate_data">Mark Completed</button>    
 {% endblock %}                    
 {% block content %}
-
-<h3 class="text-center"><i class="fas fa-chart-bar"></i>I can extract and evaluate information from tables and graphs to answer questions.</h3>
-<h4 style="color: #E67E22;">Understanding Data</h4>
-Accurate data is essential. Real-world data errors and their consequences.<br>
-Identify data types<br>
-Data can be categorical or numerical.<br>
-Elements in graphs and tables:<br>
-information from titles, labels, units and legends/keys.<br>
-<h4 style="color: #E67E22;">Extracting Information</h4>
-From tables, examine headers for ach column and row.<br>
-From graphs, identify details from x-axis and y-axis to understand what is being measured.<br>
-Identify trends over time, highest and lowest values, and comparisons between groups.<br>
-Identify outliers or irregulairites, that can lead to interesting insifhts or require futher investigation.<br>
-<h4 style="color: #E67E22;">Evaluating Information</h4>
-Interpret trends, use specific data point to answer questions, evaluate reliability considering the source and context of the data.<br>
-<div class="my-4">
-    <h4 style="color: #E67E22;"><i class="fa-solid fa-database info-icon"></i> Evaluating Data Sets</h4>
-    <p>Encourage students to evaluate small data sets, such as survey results. Introduce questions like:</p>
-    <ul>
-        <li>What does the data show?</li>
-        <li>Are there any patterns or trends?</li>
-        <li>What could the data mean for our community?</li>
-    </ul>
-    <p><strong>Activity Idea:</strong> Conduct a class survey on favorite school subjects, collect the results in a table, and discuss the findings together.</p>
-</div>
-
-
-<h4 style="color: #E67E22;">Activities</h4>
-Present a data set with intentional errors or irrelevant entries, the task is to identy these issues.<br>
-
+<main>
+  <section>
+    <h3 class="text-center"><i class="fas fa-chart-bar"></i> I can extract and evaluate information from tables and graphs to answer questions.</h3>
+    <p class="text-center">Learners will understand how to use tables and graphs to understand data.</p>
+  </section>
+  <section>
+    <div class="container text-start">
+      <div class="row">
+        <div class="col"><h4 style="color: #E67E22;">Understanding Tables and Graphs</h4>
+          <p>Learn the components of graphs and tables and how to <b>extract</b> basic information.</p>
+            <ul>
+              <li>Recognise components like titles, axes, labels, units, and legends/keys.</li>
+              <li>Understand how each element provides insights into the data presented.</li>
+            </ul>
+            <h4 style="color: #E67E22;">Develop skills to extract meaningful insights from tables and graphs</h4>
+            <ul>
+              <li>From tables, examine headers for columns and rows.</li>
+              <li>From graphs, identify details from the x-axis and y-axis, to understand what is being measured.</li>
+              <li>Identify trends over time, highest and lowest values, and comparisons between groups.</li>
+              <li>Identify outliers or irregularities, that can lead to interesting insights or require futher investigation.</li>
+            </ul>
+            <b>Activity:</b> Show a simple bar graph and ask students to identify the title, axes, and labels.<br>
+            <img src="{{ url_for('static', filename='images/bar_chart.png') }}" alt="Bar Chart" class="section-image img-fluid"><br>
+            <i>Image source: https://www.bbc.co.uk/bitesize/articles/z9kbp4j#z78h3qt</i>
+        </div>
+        <div class="col">
+          <div class="video-container">
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/bmY28wdGL9M?si=k6ysoyr4eySWOy9O" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+          </div>  
+          <h4 style="color: #E67E22;">Activites</h4>
+          <b>Guided Practice:</b> Provide a table with students' heights.<br>
+          <table style="width:100%; margin-top:10px; border-collapse: collapse; font-size: 16px;">
+            <thead>
+              <tr style="background-color: #0044cc; color: white; text-align: left;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Name</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Height (cm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border: 1px solid #ddd;">Rhys</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">130</td>
+              </tr>
+              <tr style="background-color: #ffffff;">
+                <td style="padding: 10px; border: 1px solid #ddd;">Mair</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">125</td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border: 1px solid #ddd;">Sioned</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">128</td>
+              </tr>
+              <tr style="background-color: #ffffff;">
+                <td style="padding: 10px; border: 1px solid #ddd;">Dafydd</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">132</td>
+              </tr>
+            </tbody>
+          </table>
+          Ask questions like:
+          <ul>
+            <li>Who is the tallest?</li>
+            <li>What is the average height?</li>
+            <li>Identify the shortest person.</li>
+          </ul>
+          <b>Independent Activity:</b><br>
+          Ask students to create their own bar graph using class survey data.
+        </div>
+      </div>
+    </div>      
+  </section>
+</main>
 {% endblock %}

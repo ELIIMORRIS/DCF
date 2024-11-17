@@ -6,89 +6,56 @@
 {% block content %}
 <main>
     <section>
-        <h3 class="text-center"><i class="fas fa-cogs"></i>I can create and refine algorithms and flowcharts to solve problems, making use of features such as loops, Boolean values, and formulae.</h3>
-        <p>Refining algorithms is an important aspect of computational thinking. 
-            It involves improving an initial algorithm by testing it, identifying inefficiencies or errors, and applying changes to optimize its performance.</p>
+        <h3 class="text-center"><i class="fas fa-cogs"></i> I can create and refine algorithms and flowcharts to solve problems, making use of features such as loops, Boolean values, and formulae.</h3>
+        <p class="text-center">Refining algorithms is a vital part of problem-solving in computational thinking, aimed at improving the efficiency and effectiveness of an initial solution.
+        </p>
     </section>
     <section>
         <div class="container text-start">
             <div class="row">
-                <div class="col"><h4 style="color: #008A55;">Steps involved in refining Algorithms and Flowcharts</h4>
-                    <p>1. Initial Algorithm Creation
-                    Start by designing a basic algorithm to solve a given problem.
-                    Use pseudocode or flowcharts to represent the algorithm in a clear, logical sequence of steps.
+                <div class="col">
+                    <h4 style="color: #008A55;">Steps in Refining Algorithms and Flowcharts</h4>
+                    <p><b>Initial Algorithm Creation</b><br>
+                    Start by designing a basic algorithm to solve a given problem.<br>
+                    Use <span class="fw-bold" data-bs-toggle="tooltip" title="A simple way of describing a set of instructions that does not have to use specific syntax i.e. can be written in plain English">pseudocode</span> 
+                    or flowcharts to represent the algorithm in a clear, logical sequence of steps.<br>
                     The initial algorithm might not be the most efficient, but it's essential for setting a baseline.<br>
-                    2. Testing the Algorithm
-                    Test the algorithm using sample inputs to see how it behaves.
-                    Identify any issues such as errors, inefficiencies, or steps that could be optimized.<br>
-                    3. Refining the Algorithm
-                    Simplify the logic: Look for parts of the algorithm that are overly complex and try to simplify them without affecting the outcome.
-                    Use loops and iteration: Replace repetitive steps with loops to make the algorithm more concise and efficient.
-                    Optimize conditionals: Use Boolean values to simplify decision-making processes (e.g., using if statements more effectively).
-                    Reorganize the sequence: Change the order of operations or combine similar steps to streamline the process.
-                    Improve time complexity: If the algorithm is too slow, look for ways to reduce its time complexity (e.g., replacing nested loops with more efficient alternatives).
+                    <b>Testing the Algorithm</b><br>
+                    Test the algorithm using sample inputs to see how it behaves.<br>
+                    Identify any issues such as errors, inefficiencies, or steps that could be optimised.<br>
+                    <b>Refining the Algorithm</b><br>
+                    Simplify the logic: Look for parts of the algorithm that are overly complex and try to simplify them without affecting the outcome.<br>
+                    Use loops and iteration: Replace repetitive steps with loops to make the algorithm more concise and efficient.<br>
+                    Optimise conditionals: Use <span class="fw-bold" data-bs-toggle="tooltip" title="one of two possible values (usually true and false)">Boolean values</span> to simplify decision-making processes (e.g., using if statements more effectively).<br>
+                    Reorganise the sequence: Change the order of operations or combine similar steps to streamline the process.<br>
                     Handle edge cases: Ensure that the algorithm accounts for unusual or unexpected inputs.<br>
-                    4. Refining Flowcharts
-                    Make flowcharts clear and efficient: Keep the flowchart simple and easy to follow, avoiding unnecessary steps.
-                    Use decision diamonds effectively: Boolean values are often represented as decision diamonds in flowcharts. Make sure each decision point is clear and leads to the correct outcome.
+                    <b>Refining Flowcharts</b><br>
+                    Make flowcharts clear and efficient: Keep the flowchart simple and easy to follow, avoiding unnecessary steps.<br>
+                    Use decision diamonds effectively: Boolean values are often represented as decision diamonds in flowcharts. 
+                    Make sure each decision point is clear and leads to the correct outcome.
                     Consolidate similar processes: If multiple parts of the flowchart are similar, combine them into a single decision point or process.<br>
-                    5. Documenting the Algorithm
-                    Once the algorithm is refined, document the changes and the reasons behind them.
-                    This documentation can be in the form of comments in the code, detailed explanations in pseudocode, or annotations on the flowchart.</p>
-                    Remember the symbols used in Flowcharts:<br>
-                    
-                </div>
-                <div class="col"><h4 style="color: #008A55;">Example: Refining an Algorithm to Find the Maximum Number in a List</h4>
-                    <p>Initial algorithm (using a basic loop):<br>
-                        1. Start with the first element of the list.<br>
-                        2. Compare it to the next element.<br>
-                        3. If the next element is greater, replace the current value with the next element.<br>
-                        4. Repeat steps 2–3 for all elements.<br>
-                        5. Return the largest number found.<br>
-                        <b>Refined algorithm (with a loop and Boolean check):</b><br>
-                        Initialize a variable max to the first element in the list.<br>
-                        Loop through the list starting from the second element:<br>
-                        If the current element is greater than max, update max.<br>
-                        Once the loop ends, return max.<br>
+                    <b>Documenting the Algorithm</b><br>
+                    Once the algorithm is refined, document the changes and the reasons behind them.<br>
+                    This documentation can be in the form of comments in the code, detailed explanations in pseudocode, or annotations on the flowchart.
                     </p>
-                    <h4 style="color: #008A55;">Flowcharts</h4>
+                </div>
+                <div class="col">
+                    <h4 class="text-center" style="color: #008A55;">Key Concepts in Algorithm Refinement</h4>
+                    <h5 class="text-center fw-bold" style="color: #008A55;">Loops:</h5>        
+                    <p>For loop: Used when the number of iterations is known or fixed.<br>
+                        While loop: Used when the loop should run as long as a specific condition is true.<br>
+                        Do-while loop: Used when the loop must execute at least once, and then continue as long as the condition is true.<br>
+                    </p>
+                    <h5 class="text-center fw-bold" style="color: #008A55;">Boolean Values</h5>
+                    <p>True/False, Yes/No: Used for decision-making in algorithms and flowcharts, e.g., in conditionals like "if X > Y".
+                    </p>
+                    <h5 class="text-center fw-bold" style="color: #008A55;">Formulae</h5>
+                    <p>Example formula: max = max(current_max, current_value) is an algorithmic formula to find the larger of two numbers.
+                    </p>
+                        <h4 style="color: #008A55;">Flowcharts</h4>
                     <img src="{{ url_for('static', filename='images/conditionals.png') }}" alt="Looping" class="section-image img-fluid">
                     <img src="{{ url_for('static', filename='images/conditionals_and_loops.png') }}" alt="Looping" class="section-image img-fluid">
                 </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <h4 class="text-center" style="color: #008A55;">Basic programming concepts</h4>
-        <div class="row">
-            <h5 class="text-center fw-bold" >Loops:</h5>
-            <div class="col"><h5 style="color: #008A55;">For loop</h5>
-            When the number of iterations is known or fixed
-            </div>
-            <div class="col"><h5 style="color: #008A55;">While loop</h5>
-            when the loop should only be executed if a specific condition holds true
-            </div>
-            <div class="col"><h5 style="color: #008A55;">Do-while loop</h5>
-            when the loop should be executed at least once and continue as long as the condition is true
-            </div>
-        </div>
-        <div class="row">
-            <div class="col"><h5 style="color: #008A55;">Boolean Values</h5>
-                Yes or no<br>
-                True or false
-            </div>
-            <div class="col"><h5 style="color: #008A55;">Formulae</h5>
-                Examples of formulae<br>
-                Algorithm formulae
-            </div>
-        </div> 
-    </section>
-    <section>
- 
-    </section>
-    <section>
-    
-    </section>
 
 
 </main>

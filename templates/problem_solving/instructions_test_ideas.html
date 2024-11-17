@@ -6,104 +6,127 @@
 {% block content %}
 <main>
     <section>
-        <h3 class="text-center"><i class="fa-regular fa-message"></i>I can create and record verbal, written, and symbolic instructions to test ideas<br> 
+        <h3 class="text-center"><i class="fa-regular fa-message"></i> I can create and record verbal, written, and symbolic instructions to test ideas<br> 
             e.g. the order of waking up through a diagram or flowchart.</h3>
-        <p class="text-center">It is important to create instructions that are clear, easy to follow, and effective across verbal, written, and symbolic formats.</p>
+        <h5 class="text-center">Helping students think clearly, communicate effectively, and test ideas with confidence.</h5>
     </section>
     <section>
         <div class="container text-start">
             <div class="row">
-                <div class="col"><h4 style="color: #008A55;">General Principles to follow:</h4>
+                <div class="col"><h4 style="color: #008A55;">General Principles to Follow:</h4>
                     <strong>Audience Understanding:</strong><br>
-                    Always consider the knowledge level and needs of the audience. Tailor the complexity of the instructions to their understanding and experience. 
-                    For example, instructions for younger children should use simpler language and more visuals.<br>
+                    Always consider the audience and who you are instructing.
+                    Adjust instructions to what your audience knows and understands.
+                    You wouldn't speak Welsh to someone who only understands English.<br>
                     <strong>Clear Objectives:</strong><br>
-                    Each set of instructions should have a clear purpose or goal. The user should understand why they are performing the steps and how it leads to the final outcome.<br>
+                    Each set of instructions should have a clear purpose or goal. 
+                    The user should understand why they are performing the steps and how it leads to the final outcome.<br>
                     <strong>Testing for Effectiveness:</strong><br> 
-                    After creating instructions, it’s essential to test them. Ask others (especially the intended audience) 
-                    to follow the instructions to see if they can complete the task without confusion. Collect feedback and refine as necessary.<br>
+                    After creating instructions, we need to test them. 
+                    Ask others to follow the instructions to see if they can complete the task without confusion. 
+                    Collect feedback and refine as necessary.<br>
                     <strong>Error Prevention:</strong><br> 
-                    Where possible, anticipate where users might make mistakes and provide clear warnings or tips to prevent them. For example, in written instructions, 
+                    Where possible, anticipate where users might make mistakes and provide clear warnings or tips to prevent them. 
+                    For example, in written instructions, 
                     you might say, "Be careful not to spill water when pouring it into the cup."
                 </div>
-                <div class="col"><h4 style="color: #008A55;">Instructions</h4>
+                <div class="col"><h4 style="color: #008A55;">Symbols Used in Programming Instructions</h4>
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <img src="{{ url_for('static', filename='images/symbolic_instructions.png') }}" 
+                            alt="Symbolic Programming" 
+                            class="section-image" 
+                            style="max-width: 100%; height: auto;">
+                            <i>Image source: https://venngage.com/blog/flowchart-symbols/</i>
+                    </div>   
+                </div>
+            </div>
+        </div>            
+    </section>
+    <section>
+        <div class="container text-start">
+            <div class="row">
+                <div class="col">
+                    <h4 class="text-center" style="color: #008A55;">Types of Instructions</h4>
+                    <p class="text-center"><b>It is important to create instructions that are clear, easy to follow, and effective across verbal, written, and symbolic formats.</b></p>
                     <section class="instructions">
                         <!-- Tab nav for Instructions -->
                          <ul class="nav nav-tabs" id="instructionsTabs" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active bg-success text-white" id="i-verbal-tab" data-bs-toggle="tab" data-bs-target="#i-verbal-content" type="button" role="tab" aria-controls="i-verbal-content" aria-selected="true">Verbal</button>
+                                <button class="nav-link active bg-success text-white" id="i-verbal-tab" data-bs-toggle="tab" data-bs-target="#i-verbal-content" type="button" role="tab" aria-controls="i-verbal-content" aria-selected="true"><i class="fa-regular fa-comments"></i> Verbal</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link bg-success text-white" id="i-written-tab" data-bs-toggle="tab" data-bs-target="#i-written-content" type="button" role="tab" aria-controls="i-written-content" aria-selected="false">Written</button>
+                                <button class="nav-link bg-success text-white" id="i-written-tab" data-bs-toggle="tab" data-bs-target="#i-written-content" type="button" role="tab" aria-controls="i-written-content" aria-selected="false"><i class="fa-solid fa-pencil"></i> Written</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link bg-success text-white" id="i-symbolic-tab" data-bs-toggle="tab" data-bs-target="#i-symbolic-content" type="button" role="tab" aria-controls="i-symbolic-content" aria-selected="false"><i class="fa-solid fa-shapes"></i>Symbolic</button>
+                                <button class="nav-link bg-success text-white" id="i-symbolic-tab" data-bs-toggle="tab" data-bs-target="#i-symbolic-content" type="button" role="tab" aria-controls="i-symbolic-content" aria-selected="false"><i class="fa-solid fa-shapes"></i> Symbolic</button>
                             </li>
                         </ul>
                         <!-- Tab content for Instructions -->
                          <div class="tab-content" id="instructionsContent">
                             <div class="tab-pane fade show active" id="i-verbal-content" role="tabpanel" aria-labelledby="i-verbal-tab">
                                 <section>
-                                    Always think of your audience. Use simple, clear language.<br>
-                                    Verbal instructions should be delivered in a logical order, one step at a time, 
-                                    so the listener can easily follow without getting lost.<br>
-                                    Pause between each step to allow the listener to absorb the information. Allow time to complete each step before moving to the next.<br>
-                                    Interact and encourage the listener to ask questions if they don't understand something.<br>
-                                    Voice tone and emphasis to indicate the importance of a certain step.
+                                    <b>Guidelines:</b><br>
+                                    Use simple, clear language.<br>
+                                    Pause between steps.<br>
+                                    Engage with the listener through questions or clarifications.<br>
+                                    <b>Example Activity:</b><br>
+                                    Explain how to tie a shoelace to a friend using only words.
                                 </section>
                             </div>
                             <div class="tab-pane fade" id="i-written-content" role="tabpanel" aria-labelledby="i-written-tab">
                                 <section>
-                                    Follow a logical, step-by-step structure. Numbered or bulleted lists can help make the sequence clear.<br> 
-                                    Each step should be easy to understand without the need for additional explanation.<br>
-                                    Keep each instruction brief, clear, and to the point. Avoid <span class="fw-bold" data-bs-toggle="tooltip" title="abstraction">unnecessary words or details</span> that might confuse the reader.<br>
-                                    Try to start each step with a verb. For example: "open", "design", "describe", "arrange", or "compare". This focuses attention 
+                                    <b>Guidelines:</b><br>
+                                    Follow a logical, step-by-step structure.<br>
+                                    Use numbered or bullet points.<br>
+                                    Begin each step with an action verb. For example: "open", "design", "describe", "arrange", or "compare". This focuses attention 
                                     on what needs to be done.<br>
-                                    Format appropriately for visual clarity. Use headings, subheadings, and leave space between sections to improve readability.<br> 
-                                    Maintain consistency in formatting, terminology, and punctuation throughout the instructions to avoid confusion.
+                                    Keep each instruction brief, clear and to the point. Avoid <span class="fw-bold" data-bs-toggle="tooltip" title="abstraction">unnecessary words or details</span> that might confuse the reader.<br>
+                                    <b>Example Activity:</b><br>
+                                    Write instructions for playing your favourite game.
                                 </section>
                             </div>
                             <div class="tab-pane fade" id="i-symbolic-content" role="tabpanel" aria-labelledby="i-symbolic-tab">
                                 <section>
-                                    Flowcharts, Diagrams, or Icons<br>
-                                    Flowcharts in Programming<br>
+                                    <b>Guidelines:</b><br>
+                                    Use flowcharts, diagrams, or icons to represent steps visually.<br>
+                                    <b>Common flowchart symbols:</b><br>
+                                    <ul style="list-style: none; padding: 0; font-size: 1rem;">
+                                        <li style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                            <i class="fa-solid fa-arrow-down-long" style="color: #008A55; margin-right: 0.5rem;"></i>
+                                            <span>Arrow shows <span class="fw-bold" data-bs-toggle="tooltip" title="the order of the actions">sequence.</span><br>
+                                        </li>
+                                        <li style="display: flex; align-items: center;">
+                                            <i class="fa-regular fa-circle" style="color: #008A55; margin-right: 0.5rem;"></i>
+                                            <span>Circle connects arrows or steps</span>
+                                        <li style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                            <i class="fa-solid fa-diamond" style="color: #008A55; margin-right: 0.5rem;"></i>
+                                            <span>Diamond shows a choice in a process, indicates a decision point (i.e. yes or no).</span>
+                                        </li>
+                                        <b>Example Activity:</b><br>
+                                        Using Programming Symbols, create a flowchart for your morning routine.
+                                    </li>
+                                    </ul>
                                 </section>
                             </div>
                         </div>
                     </section>
                 </div>
+                <div class="col">
+                    <h4 class="text-center" style="color: #008A55;">Flowchart Example</h4>
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <img src="{{ url_for('static', filename='images/Flowchart_example.png') }}" 
+                            alt="Flowchart Example" 
+                            class="section-image" 
+                            style="max-width: 50%; height: auto; border: 1px solid #ddd; border-radius: 8px; padding: 5px;"><br>
+                        <i>Image source: https://kids.kiddle.co/Flow_chart</i>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
     <section>
-        <h4 style="color: #008A55; font-weight: bold; margin-bottom: 1rem;">Symbols Used in Programming Instructions</h4>
-        <!-- Image with styling for alignment and spacing -->
-        <div style="text-align: center; margin-bottom: 1rem;">
-            <img src="{{ url_for('static', filename='images/symbolic_instructions.png') }}" 
-                 alt="Symbolic Programming" 
-                 class="section-image" 
-                 style="max-width: 100%; height: auto;">
-                 <i>Image source: https://venngage.com/blog/flowchart-symbols/</i>
-                 https://www.gliffy.com/blog/guide-to-flowchart-symbols
-                 https://www.teachwithict.com/flowcharts.html
-                 https://www.google.com/imgres?q=programming%20flowchart%20symbols%20explain%20to%20children&imgurl=https%3A%2F%2Fkids.kiddle.co%2Fimages%2Fthumb%2F9%2F91%2FLampFlowchart.svg%2F300px-LampFlowchart.svg.png&imgrefurl=https%3A%2F%2Fkids.kiddle.co%2FFlow_chart&docid=Efv9wE443fN-8M&tbnid=qFmUnRR6ZpJPLM&vet=12ahUKEwjUkKnj9c2JAxVRWUEAHePcKDcQM3oECGYQAA..i&w=300&h=409&hcb=2&ved=2ahUKEwjUkKnj9c2JAxVRWUEAHePcKDcQM3oECGYQAA
-                 
-        </div>
-        <!-- Symbol Descriptions with icon alignment and spacing -->
-        <ul style="list-style: none; padding: 0; font-size: 1rem;">
-            <li style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-                <i class="fa-solid fa-arrow-down-long" style="color: #008A55; margin-right: 0.5rem;"></i>
-                <span>Arrow shows the order of the actions</span>
-            </li>
-            <li style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-                <i class="fa-solid fa-diamond" style="color: #008A55; margin-right: 0.5rem;"></i>
-                <span>Diamond shows a choice in a process</span>
-            </li>
-            <li style="display: flex; align-items: center;">
-                <i class="fa-regular fa-circle" style="color: #008A55; margin-right: 0.5rem;"></i>
-                <span>Circle connects arrow</span>
-            </li>
-        </ul>
+        <h4 class="text-center" style="color: #008A55;">Resources</h4>
     </section>
 </main>
 {% endblock %}
