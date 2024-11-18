@@ -1,19 +1,18 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
 {% block content %}
-    <h2>Search Results for "{{ search_term }}"</h2>
-    {% if results %}
-        <ul class="list-group">
-            {% for result in results %}
-                <li class="list-group-item">
-                    <a href="{{ url_for('lesson', template_name=result.template_name) }}">
-                        {{ result.title }}
-                    </a>
-                    <p>{{ result.description }}</p>
-                    <small>DCF Element: {{ result.dcf_element }} | Progression Step: {{ result.progression_step }}</small>
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No results found for "{{ search_term }}".</p>
-    {% endif %}
+<h1>Search Results</h1>
+<p>Showing results for: <strong>{{ query }}</strong></p>
+
+{% if results %}
+    <ul>
+    {% for page, content in results.items() %}
+        <li>
+            <a href="{{ url_for(page) }}">{{ page.replace('_', ' ').title() }}</a> - {{ content }}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found.</p>
+{% endif %}
 {% endblock %}

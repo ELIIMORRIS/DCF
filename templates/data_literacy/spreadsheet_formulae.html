@@ -5,70 +5,68 @@
 {% endblock %}
 {% block content %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable@12.0.1/dist/handsontable.min.css">
-<script src="https://cdn.jsdelivr.net/npm/handsontable@12.0.1/dist/handsontable.min.js"></script>
-
 <main>
   <section class="text-center my-4">
-    <h3><i class="fa-solid fa-file-excel"></i> I can use a range of spreadsheet formulae, e.g., +, -, /, *, SUM, AVERAGE, MAX, MIN.</h3>
-    <p>Spreadsheets are essential tools for data analysis and visualization. They help students understand mathematical concepts and manage data in real-life contexts, 
-      such as budgeting or comparing product prices.</p>
+    <h3><i class="fa-solid fa-file-excel"></i> I can use a range of spreadsheet formulae</h3>
+    <p>Spreadsheets are powerful tools for organising, analysing, and visualising data.  They provide practical applications for real-world scenarios, 
+      like managing budgets or comparing product prices.</p>
   </section>
-
   <section>
     <div class="container text-start">
         <div class="row">
             <div class="col-md-6">
               <h4 style="color: #E67E22;">Spreadsheet Formulae</h4>
-                <ul>
-                  <li><code>+</code>, <code>-</code>, <code>/</code>, <code>*</code> - Basic arithmetic operations.</li>
-                  <li><code>SUM</code> - Adds up a range of cells. E.g., <code>=SUM(B2:B9)</code></li>
-                  <li><code>AVERAGE</code> - Calculates the average of a range. E.g., <code>=AVERAGE(C2:C9)</code></li>
-                  <li><code>MAX</code> - Finds the highest value. E.g., <code>=MAX(B2:B9)</code></li>
-                  <li><code>MIN</code> - Finds the lowest value. E.g., <code>=MIN(C2:C9)</code></li>
-                </ul>
+              <b>Basic Arithmetic Operations:</b><br>
+                <code>+</code> (Addition)<br>
+                <code>-</code> (Subtraction)<br> 
+                <code>/</code> (Division)<br> 
+                <code>*</code> (Multiplication)<br>
+              <b>Common Functions:</b><br>
+                <b><code>SUM:</code></b> Adds up a range of cells<br>
+                Example <code>=SUM(B2:B5)</code> will add up every value in 
+                  column B, rows 2 to 5, giving the total.<br>
+                <b><code>AVERAGE:</code></b> Calculates the mean of a range<br>
+                Example <code>=AVERAGE(C2:C5)</code><br>
+                <b><code>MAX:</code></b> Finds the highest value in a range<br>  
+                Example <code>=MAX(B2:B5)</code><br>
+                <b><code>MIN:</code></b> Finds the lowest value in a range<br> 
+                Example <code>=MIN(C2:C5)</code>
+                <h4 style="color: #E67E22;">Spreadsheet Quiz</h4>
+                <iframe 
+                width="520" 
+                height="315" 
+                src="https://www.youtube.com/embed/MEiiZH-nZJ0?si=9AjL-oUMzRd648Nw" 
+                title="Spreadsheet Quiz" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+                </iframe><br>
             </div>
             <div class="col-md-6">
-              <h4 style="color: #E67E22;">Spreadsheet Formulae Demonstration</h4>
+              <h4 style="color: #E67E22;">Interactive Spreadsheet</h4>
+              <p>In this table, various arithmetic operations and common formulas are applied.<br>
+                Explore with different values, to see the results updated.<br>
+                <i class="fa-regular fa-lightbulb"></i> <b>Tip</b>: Double click the results column to see the formula.
+                </p>
               <div id="spreadsheet" class="my-3"></div>
-              <p>In this table, various arithmetic operations and common formulas are applied.</p>
-            </div>
-        </div>
+              <h4 style="color: #E67E22;">Practical Application</h4>
+              <p>
+                <b>Budgeting:</b> Use <code>SUM</code> to total monthly expenses and <code>AVERAGE</code> to calculate spending trends.<br>
+                <b>Data Comparison:</b> Employ <code>MAX</code> and <code>MIN</code> to identify the most and least expensive products.<br>
+                <b>Visualizing Data:</b> Combine functions with chart tools to create engaging data visuals.<br>
+              </p>
+              <p>Check it out:<br> 
+                <a href="https://www.bbc.co.uk/bitesize/articles/z99jpbk#zk92nk7" target="_blank">How to find the mean, median, mode and range</a></p>
+                <h4 class="text-center" style="color: #E67E22;">Resources</h4>
+                <a href="https://www.attechedu.com/single-post/teaching-spreadsheets-a-guide-to-introducing-spreadsheets-to-primary-students" target="_blank">At Tech Edu: Teaching Spreadsheets</a>.
+           </div>
+      </div>
     </div>
   </section>
-
-  <section class="text-center my-4">
-    <p>For a guide on introducing spreadsheets to primary students, visit 
-      <a href="https://www.attechedu.com/single-post/teaching-spreadsheets-a-guide-to-introducing-spreadsheets-to-primary-students" target="_blank">Teaching Spreadsheets: A Guide for Primary Students</a>.
-    </p>
-  </section>
 </main>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const container = document.getElementById('spreadsheet');
-        
-        const data = [
-            ['Operation', 'Number 1', 'Number 2', 'Formula', 'Result'],
-            ['Addition', 10, 5, '=B2+C2', ''],
-            ['Subtraction', 10, 5, '=B3-C3', ''],
-            ['Multiplication', 10, 5, '=B4*C4', ''],
-            ['Division', 10, 5, '=B5/C5', ''],
-            ['Average', 10, 20, '=AVERAGE(B6:C6)', ''],
-            ['Max', 10, 20, '=MAX(B7:C7)', ''],
-            ['Min', 10, 20, '=MIN(B8:C8)', ''],
-            ['Sum', 10, 20, '=SUM(B9:C9)', '']
-        ];
-        
-        const hot = new Handsontable(container, {
-            data: data,
-            rowHeaders: true,
-            colHeaders: true,
-            contextMenu: true,
-            formulas: true,
-            height: 'auto',
-            licenseKey: 'non-commercial-and-evaluation'
-        });
-    });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/handsontable@12.0.1/dist/handsontable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hyperformula@1.2.0/dist/hyperformula.full.min.js"></script>
+<script src="/static/js/spreadsheet.js"></script>
 
 {% endblock %}
