@@ -8,13 +8,19 @@ app = Flask(__name__)
 
 # Define the index for your pages
 PAGE_CONTENTS = {
-    "data_format": "Learn about data formats in the data literacy section.",
-    "data_sets": "Explore data sets and how to analyze them in the data literacy section.",
-    "evaluate_data": "Understand how to evaluate data effectively.",
-    "spreadsheet_formulae": "Spreadsheet",
-    "debugging": "Debugging is an essential part of problem-solving.",
-    "identify_repetitions": "Identify repetitions in algorithms to optimize them.",
-    "computational_thinking": "Discover the principles of computational thinking."
+    "data_format": "Collect, enter, organise, analyse data into different formats, tables, pie chart bar chart tally chart line graph database and spreadsheet. Qualitative Data Quantitative Data. Discrete data continuous data. Data sources Google Sheets",
+    "data_sets": "Construct, refine, interrogate data sets within tables, chart, spreadsheet, and database. Analyse data set. data collection, statistical, survey, average, median, mode, pattern",
+    "evaluate_data": "Evaluate data, tables, graphs, labels, units, axes, visualise, accurate, pattern, analysis, digital tools.",
+    "spreadsheet_formulae": "Spreadsheet formulae, organising data, analysing, visualising, practical, budget, interactive, arithmetic operations, sum average range min max value, visualising, comparing, results column, functions",
+    "break_down_a_problem": "Decomposition, detail, variables, design, functions, abstraction, details.",
+    "debugging": "Debugging, detect, correct, errors, instructions, interactive.",
+    "identify_repetitions": "Identify repetitions algorithms, repeating, loop, sequence, pattern, simplify instructions.",
+    "importance_of_order": "Importance order of statements algorithm, logic, solution, sequence, decomposition, conditional, loop, abstraction, iteration.",
+    "instructions_change": "Change instructions different outcome, modify algorithm, iteration repetition, order operations, directions, creative navigation.",
+    "instructions_test_ideas": "Create record verbal, written, symbolic instructions, flowchart, communicate, testing, symbols, language, listen, logical, step, points, brief clear diagram.",
+    "refining_algorithms": "Refine algorithms flowchart solve problems, loop, Boolean values, formulae. Clear, logical, order, sequence, steps, test, input, error.",
+    "computational_thinking": "Computational Thinking problem-solving skills, abstraction, decomposition, pattern, algorithm design.",
+    "resources": "Events workshops, technocamps, hardware, CPD."
 }
 
 # Centralised headers dictionary
