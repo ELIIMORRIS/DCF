@@ -7,19 +7,6 @@ body {
     background-color: #f9f9f9;
 }
 
-/* DCF Red Button Styling */
-.red-button {
-    background-color: #f41128;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.red-button:hover {
-    background-color: #b41e2d;
-}
-
 /* Accordion Button Styles for Problem Solving */
 #problemSolvingAccordion .accordion-button {
     background-color: #00AB66; /* Light Green for Problem-Solving */
@@ -30,7 +17,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-#problemSolvingAccordion .accordion-button:not(.collapsed) {
+#problemSolvingAccordion .accordion-button.active {
     background-color: #008A55; /* Dark Green when expanded */
 }
 
@@ -48,7 +35,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-#dataLiteracyAccordion .accordion-button:not(.collapsed) {
+#dataLiteracyAccordion .accordion-button.active {
     background-color: #F39C12; /* Dark Orange when expanded */
 }
 
@@ -125,15 +112,16 @@ body {
 
 .breadcrumb-item a {
     color: #007bff;
+    text-decoration: none;
 }
 
 .breadcrumb-item.active {
     color: #6c757d;
+    font-weight: bold;
 }
 
-/* Highlight active breadcrumb item */
-.breadcrumb-item.active {
-    font-weight: bold;
+.breadcrumb-item a:hover {
+    text-decoration: underline;
 }
 
 /* Icon and Link Styling */
