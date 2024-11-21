@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% set page_id = "identify_repetitions" %}
 {% block header_button %}
-    <button onclick="markAsComplete('identify_repetitions')" id="btn-identify_repetitions">Mark Completed</button>
+    <button onclick="markAsComplete('identify_repetitions')" id="btn-identify_repetitions" class="btn btn-success my-3">Mark Completed</button>
 {% endblock %}
 {% block content %}
 <main>
@@ -82,13 +82,13 @@
     </section>
     <section>
         <h4 class="text-center" style="color: #008A55;">Pattern Recongition Activity</h4>
-        <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Activity.pdf') }}" class="btn btn-primary btn-lg" download>
+        <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Activity.pdf') }}" class="download-btn" download>
             Download Sequences Activity
         </a>
-        <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Worksheet.pdf') }}" class="btn btn-primary btn-lg" download>
+        <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Worksheet.pdf') }}" class="download-btn" download>
             Download Sequences Worksheet
         </a>
-        <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Worksheet_2.pdf') }}" class="btn btn-primary btn-lg" download>
+        <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Worksheet_2.pdf') }}" class="download-btn" download>
             Download Sequences Worksheet Extra
         </a>
     </section>

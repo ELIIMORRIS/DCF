@@ -274,3 +274,27 @@ body {
     background-color: #d4edda;
     border-color: #28a745;
 }
+
+/* Style for Download Buttons */
+.download-btn {
+    background-color: #6A5ACD; /* Slate Blue */
+    color: white; /* White text for contrast */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #483D8B; /* Darker Slate Blue on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.download-btn:active {
+    background-color: #4B0082; /* Indigo when active */
+    transform: scale(0.95); /* Slight shrink on click */
+}

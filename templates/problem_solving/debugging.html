@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% set page_id = "debugging" %}
 {% block header_button %}
-    <button onclick="markAsComplete('debugging')" id="btn-debugging">Mark Completed</button>
+    <button onclick="markAsComplete('debugging')" id="btn-debugging" class="btn btn-success my-3">Mark Completed</button>
 {% endblock %}
 {% block content %}
 <main>
@@ -52,13 +52,13 @@
         <!-- Download Section -->
         <section class="text-center mt-4">
             <h3>Download these lesson packs from Barefoot Computing:</h3><br>
-            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Teacher_Pack.pdf') }}" class="btn btn-primary btn-lg" download>
+            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Teacher_Pack.pdf') }}" class="download-btn" download>
                 Debug Teacher Guide
             </a>
-            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Activity.pdf') }}" class="btn btn-primary btn-lg" download>
+            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Activity.pdf') }}" class="download-btn" download>
                 Debug Presentation
             </a>
-            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Worksheet.pdf') }}" class="btn btn-primary btn-lg" download>
+            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Worksheet.pdf') }}" class="download-btn" download>
                 Debug Worksheet
             </a>
         </section>

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% set page_id = "data_format" %}
 {% block header_button %}
-    <button onclick="markAsComplete('data_sets')" id="btn-data_sets">Mark Completed</button><br>                        
+    <button onclick="markAsComplete('data_sets')" id="btn-data_sets" class="btn btn-warning">Mark Completed</button><br>                        
 {% endblock %}
 {% block content %}
 <main>
@@ -184,7 +184,7 @@
           </div>
           <div class="col">
             Download this extensive database pack from Digital Schoolhouse:<br>
-            <a href="{{ url_for('download_file', filename='Databases_Unplugged_by_Digital_Schoolhouse.pdf') }}" class="btn btn-primary btn-lg" download>
+            <a href="{{ url_for('download_file', filename='Databases_Unplugged_by_Digital_Schoolhouse.pdf') }}" class="download-btn" download>
             Databases Unplugged</a>
           </div>
         </div>
