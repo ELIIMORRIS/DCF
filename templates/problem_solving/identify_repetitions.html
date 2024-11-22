@@ -23,10 +23,8 @@
                             width="560" 
                             height="315" 
                             src="https://www.youtube.com/embed/wxds6MAtUQ0"
-                            title="Looping with codeacademy" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
+                            title="Looping with CodeAcademy" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     </div>
                 </div>
@@ -49,8 +47,7 @@
         Simplify using loops: Instead of rewriting a repeated line or section multiple times, note where it should loop back and how many times to repeat.<br>
 
         <div class="row">
-            <div class="col">
-                <h4 class="text-center" style="color: #008A55;">Yma o Hyd</h4>
+            <div class="col"><h4 class="text-center" style="color: #008A55;">Yma o Hyd</h4>
                 <div class="video-container">
                     <iframe 
                         width="560" 
@@ -63,8 +60,7 @@
                     </iframe>
                 </div>
             </div>
-            <div class="col">
-                <h4 class="text-center" style="color: #008A55;">Lawr ar Lan y Mor</h4>
+            <div class="col"><h4 class="text-center" style="color: #008A55;">Lawr ar Lan y Mor</h4>
                 <div class="video-container">
                     <iframe 
                         width="560" 
@@ -82,15 +78,17 @@
     </section>
     <section>
         <h4 class="text-center" style="color: #008A55;">Pattern Recongition Activity</h4>
-        <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Activity.pdf') }}" class="download-btn" download>
-            Download Sequences Activity
-        </a>
-        <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Worksheet.pdf') }}" class="download-btn" download>
-            Download Sequences Worksheet
-        </a>
-        <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Worksheet_2.pdf') }}" class="download-btn" download>
-            Download Sequences Worksheet Extra
-        </a>
+        <p class="text-center">
+            <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Activity.pdf') }}" class="download-btn" download>
+                Download Sequences Activity
+            </a>
+            <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Worksheet.pdf') }}" class="download-btn" download>
+                Download Sequences Worksheet
+            </a>
+            <a href="{{ url_for('download_file', filename='Barefoot_Sequences_Worksheet_2.pdf') }}" class="download-btn" download>
+                Download Sequences Worksheet Extra
+            </a>
+        </p>
     </section>
 </main>
 {% endblock %}

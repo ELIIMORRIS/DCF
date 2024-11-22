@@ -1,5 +1,4 @@
 from flask import Flask, render_template, send_from_directory, abort, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
 import os
 
 from jinja2 import TemplateNotFound

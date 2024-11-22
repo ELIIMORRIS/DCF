@@ -7,12 +7,14 @@
 <main>
     <section>
         <h3 class="text-center"><i class="fa-solid fa-sliders"></i> I can change instructions to achieve a different outcome.</h3>
-        <p class="text-center">Encourage learners to experiment with and modify the steps in an algorithm to explore how different instructions impact the final outcome.</p>
+        <p class="text-center">Encourage learners to experiment with and modify the steps in an algorithm to explore how different instructions impact the final outcome.
+        </p>
     </section>
     <section>
         <div class="container text-start">
             <div class="row">
-                <div class="col"><h4 style="color: #008A55;">Iteration: Improving Through Repetition</h4>
+                <div class="col">
+                    <h4 style="color: #008A55;">Iteration: Improving Through Repetition</h4>
                     <p>Use iteration to refine and improve solutions.<br>
                         <b>Definition:</b><br>
                         Iteration involves repeating a process while making incremental improvements based on prior results. 
@@ -22,11 +24,11 @@
                         Typing the word "allow" repeatedly: "allow, allow, allow."<br>
                         <b>Iteration:</b><br> 
                         Typing variations that evolve: "allow, arrow, arrowhead."<br>
-
                         <b>Activity:</b><br>
                         Design a basic word ladder puzzle where learners must iteratively change one letter in a word to reach a target word<br> 
                         (e.g., "cat" → "cot" → "dot" → "dog").<br>
                         Use a flowchart or pseudo-code to demonstrate how iterative problem-solving works in programming.
+                    </p>
                 </div>
                 <div class="col"><h4 style="color: #008A55;">Order in Mathematics: Understanding PEMDAS</h4>
                     <p>The order of operations is important in mathematics.<br>
@@ -59,9 +61,10 @@
         <div class="row">
             <div class="col"><h4 style="color: #008A55;">The Shortest Path vs The Longest Path</h4>
                 <p>Find efficient or creative ways to solve navigation problems.<br>
-                <b>Activity:</b><br>
-                Shortest Path to Treasure: Give instructions to guide the arrow to the treasure in the shortest number of moves.<br>
-                Longest Path Challenge: Reverse the task, to maximize the distance traveled before reaching the treasure.</p>
+                    <b>Activity:</b><br>
+                    Shortest Path to Treasure: Give instructions to guide the arrow to the treasure in the shortest number of moves.<br>
+                    Longest Path Challenge: Reverse the task, to maximize the distance traveled before reaching the treasure.
+                </p>
                 <img src="{{ url_for('static', filename='images/change_instructions.png') }}" alt="Instrctions_to_treasure" class="section-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('{{ url_for('static', filename='images/change_instructions.png') }}')">
             </div>
             <div class="col"><h4 style="color: #008A55;">Instructing a Robot</h4>
@@ -69,9 +72,10 @@
                     <b>Activity:</b><br>
                     Consider how you would instruct a robot differently to a person.<br>
                     How do robots think?<br>
-                    * HINT * Like a computer!<br>
+                    <i class="fa-solid fa-robot"></i> <b>HINT:</b> Like a computer! <i class="fa-solid fa-desktop"></i><br>
                     <br>
-                <img src="{{ url_for('static', filename='images/instruct_a_robot.png') }}" alt="guide_the_robot" class="section-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('{{ url_for('static', filename='images/instruct_a_robot.png') }}')">
+                    <img src="{{ url_for('static', filename='images/instruct_a_robot.png') }}" alt="guide_the_robot" class="section-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('{{ url_for('static', filename='images/instruct_a_robot.png') }}')">
+                </p>
             </div>
         </div>
         <!-- Modal -->
@@ -88,4 +92,5 @@
             </div>
         </div>
     </section>
+</main>
 {% endblock %}

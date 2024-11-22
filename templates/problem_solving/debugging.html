@@ -8,24 +8,24 @@
     <section>
         <h3 class="text-center"><i class="fa-solid fa-bug"></i>I can detect and correct mistakes which cause instructions (a solution) to fail (debug).</h3>
         <p class="text-center">Debugging is an essential skill in problem-solving and <a href="{{ url_for('computational_thinking') }}">computational thinking.</a>
-        It involves identifying errors in instructions, analysing their causes and making corrections to ensure that a solution works as intended.</p>
+        It involves identifying errors in instructions, analysing their causes and making corrections to ensure that a solution works as intended.
+        </p>
     </section>
     <section>
         <div class="container text-start">
             <div class="row">
                 <div class="col"><h4 style="color: #008A55;">Approach</h4>
                     Here is a structured approach to help <span class="fw-bold" data-bs-toggle="tooltip" title="debug">detect and correct mistakes</span> in various contexts:<br>
-                    <strong>1. Understand the problem</strong><br>
+                    <b>1. Understand the problem</b><br>
                     What are we trying to do? What should the outcome look like?<br>
-                    <strong>2. Before debugging clarify what the expected outcome should be.</strong><br>
+                    <b>2. Before debugging clarify what the expected outcome should be.</b><br>
                     What is the end goal?<br>
-                    <strong>3. Run the instructions and carefully note where and how the issue occurs.</strong><br>
-                    Test and observe to find the "bug"!
-                    <br>
+                    <b>3. Run the instructions and carefully note where and how the issue occurs.</b><br>
+                    Test and observe to find the "bug"!<br>
                     <i class="fa-solid fa-rocket"></i><b>It is important to remember that mistakes are part of the learning process.</b>
                 </div>
                 <div class="col"><h4 style="color: #008A55;">Interactive Debugging</h4>
-                    Arrange these steps to brush our teeth!<br>
+                    Arrange these steps to brush your teeth correctly!<br>
                     <div class="game-container">
                         <div class="steps" id="steps">
                             <div class="step" draggable="true" id="step4">Put toothbrush away</div>
@@ -49,18 +49,17 @@
         <h4 style="color: #008A55;">Unplugged Activity</h4>            
         Play "Simon Says" with a twist. Include some intentional mistakes in the instructions and see if students can spot and correct them.
     </section>
-        <!-- Download Section -->
-        <section class="text-center mt-4">
-            <h3>Download these lesson packs from Barefoot Computing:</h3><br>
-            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Teacher_Pack.pdf') }}" class="download-btn" download>
-                Debug Teacher Guide
-            </a>
-            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Activity.pdf') }}" class="download-btn" download>
-                Debug Presentation
-            </a>
-            <a href="{{ url_for('download_file', filename='Barefoot_Debug_Worksheet.pdf') }}" class="download-btn" download>
-                Debug Worksheet
-            </a>
-        </section>
+    <section class="text-center mt-4">
+        <h3>Download these lesson packs from Barefoot Computing:</h3><br>
+        <a href="{{ url_for('download_file', filename='Barefoot_Debug_Teacher_Pack.pdf') }}" class="download-btn" download>
+            Debug Teacher Guide
+        </a>
+        <a href="{{ url_for('download_file', filename='Barefoot_Debug_Activity.pdf') }}" class="download-btn" download>
+            Debug Presentation
+        </a>
+        <a href="{{ url_for('download_file', filename='Barefoot_Debug_Worksheet.pdf') }}" class="download-btn" download>
+            Debug Worksheet
+        </a>
+    </section>
 </main>
 {% endblock %}
