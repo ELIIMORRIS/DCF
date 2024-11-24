@@ -9,7 +9,7 @@ body {
 
 /* Accordion Button Styles for Problem Solving */
 #problemSolvingAccordion .accordion-button {
-    background-color: #00AB66; /* Light Green for Problem-Solving */
+    background-color: #00AB66;
     color: white;
     font-size: 18px;
     border: none;
@@ -22,12 +22,12 @@ body {
 }
 
 #problemSolvingAccordion .accordion-button:hover {
-    background-color: #03c19b;
+    background-color: #03C19B;
 }
 
 /* Accordion Button Styles for Data Literacy */
 #dataLiteracyAccordion .accordion-button {
-    background-color: #E67E22; /* Light Orange for Data Literacy */
+    background-color: #E67E22;
     color: white;
     font-size: 18px;
     border: none;
@@ -91,18 +91,6 @@ body {
     background-color: #fad7b3; /* Dark Orange Background for Step 3 */
 }
 
-/* Style the Problem Solving dropdown button */
-#problemDropdown {
-    background-color: #00AB66; /* Sets background color to green */
-    color: white; /* Changes text color to white for contrast */
-}
-
-/* Style the Data dropdown button */
-#dataDropdown {
-    background-color: #E67E22;
-    color: white;
-}
-
 /* Breadcrumb Styling */
 .breadcrumb {
     padding: 0;
@@ -138,9 +126,9 @@ body {
 .term {
     background-color: #FFF9C4; /* Light yellow */
     color: #FBC02D; /* Darker yellow for text */
-    font-weight: bold; /* Optional: make the text bold for emphasis */
-    padding: 10px; /* Optional: add padding to improve appearance */
-    border-radius: 5px; /* Optional: round the corners slightly */
+    font-weight: bold; 
+    padding: 10px; 
+    border-radius: 5px;
 }
 
 /* Video Container */

@@ -10,12 +10,59 @@
             <div class="col-md-6 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h2>Computational Thinking skills</h2>
+                        <h2>Computational Thinking Skills</h2>
+                        <p>Can be defined by Four Key Techniques:</p>
                         <ul>
-                            <li><b>Abstraction:</b> Simplifying complex problems by focusing on the relevant details.</li>
-                            <li><b><a href="{{ url_for('break_down_a_problem') }}">Decomposition</a>:</b> Breaking a problem into smaller, manageable parts.</li>
-                            <li><b><a href="{{ url_for('identify_repetitions') }}">Pattern Recognition:</a></b> Identifying similarities or patterns in data.</li>
-                            <li><b><a href="{{ url_for('refining_algorithms') }}">Algorithm Design:</a></b> Creating a step-by-step solution to a problem.</li>
+                            <li>
+                                <b>Abstraction:</b> Simplifying complex problems by focusing on the relevant details.<br>
+                                <a class="text-dark" data-bs-toggle="collapse" href="#abstraction-details" role="button" aria-expanded="false" aria-controls="abstraction-details">
+                                Read more
+                                </a>
+                                <div class="collapse mt-2" id="abstraction-details">
+                                    <p>Abstraction involves simplifying complex information by identifying and focusing on the essential and important
+                                        details, and ignoring irrelevant information and unnecessary complexities. This is especially useful when facing 
+                                        unfamiliar problems by concentrating on what is necessary.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <b><a href="{{ url_for('break_down_a_problem') }}">Decomposition</a>:</b> Breaking a problem into smaller, manageable parts.<br>
+                                <a class="text-dark" data-bs-toggle="collapse" href="#decomposition-details" role="button" aria-expanded="false" aria-controls="decomposition-details">
+                                    Read more
+                                </a>
+                                <div class="collapse mt-2" id="decomposition-details">
+                                    <p>Problem decomposition involves systematically dividing a complex problem into smaller, more manageable parts. 
+                                        This allows the assessment and resolution of each sub-problem at hand, and by deriving solutions to each sub-part, 
+                                        it is possible to assess all steps necessary to solve the bigger problem. For example, when working on an assisgnemnt,
+                                        it is necessary to divide it into sections to answer each part individually so that it is easier to analyse and solve.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <b><a href="{{ url_for('identify_repetitions') }}">Pattern Recognition:</a></b> Identifying similarities or patterns in data.<br>
+                                <a class="text-dark" data-bs-toggle="collapse" href="#pattern-recognition-details" role="button" aria-expanded="false" aria-controls="pattern-recognition-details">
+                                    Read more
+                                </a>
+                                <div class="collapse mt-2" id="pattern-recognition-details">
+                                    <p>Pattern recognition involves identifying similarities and recurring themes and regularities. Recognising recurrent patterns
+                                        can subsequently lead to more efficient and effective problem-solving by saving time. Pattern recognition can be seen from 
+                                        webiste design, where there is always a main, header, body and footer. 
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <b><a href="{{ url_for('refining_algorithms') }}">Algorithm Design:</a></b> Creating a step-by-step solution to a problem.<br>
+                                <a class="text-dark" data-bs-toggle="collapse" href="#algorithm-design-details" role="button" aria-expanded="false" aria-controls="algorithm-design-details">
+                                    Read more
+                                </a>
+                                <div class="collapse mt-2" id="algorithm-design-details">
+                                    <p>An algorithm is a list of instructions needed to follow to achieve the same desired outcome every time.
+                                        Algorithmic thinking involves constructung a single function that can be applied to multiple sub problems. 
+                                        Computers take instructions very literally, therefore instructions in the algorithm must be precise and detailed.
+                                        Developing efficient algorithms is a fundamental aspect of computational thinking.
+                                    </p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -46,9 +93,14 @@
             </iframe>
         </div>
     </section>
-    <section>
-        <img src="{{ url_for('static', filename='images/Barefoot_CT_jargon_buster.png') }}" alt="Computational Thinking Jargon Buster" class="section-image img-fluid"><br>
-    </section>
+    <section class="row">
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='images/Barefoot_CT_jargon_buster.png') }}" alt="Computational Thinking Jargon Buster" class="section-image img-fluid">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='images/Barefoot_CT_jargon_buster_CYMRAEG.png') }}" alt="Computational Thinking Jargon Buster Cymraeg" class="section-image img-fluid">
+        </div>
+    </section>    
     <section class="text-center mt-4">
         <a href="{{ url_for('download_file', filename='Barefoot_Quick_Guide_to_computational_thinking.pdf') }}" class="download-btn" download>
             Download Computational Thinking Guide

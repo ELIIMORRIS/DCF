@@ -54,16 +54,19 @@ def home():
 @app.route('/glossary')
 def glossary():
     glossary_terms = {
-        'Algorithm': 'A step-by-step procedure for solving a problem or accomplishing a task.',
-        'Debug': 'The process of identifying and fixing bugs or errors in a program.',
+        'Abstraction': 'Identifying and focusing on only the important parts needed to solve the problem.',
+        'Algorithm': 'A step-by-step procedure for solving a problem or completing a task.',
+        'Coding': 'The process of writing instructions that a computer can understand and execute.',
+        'Computational Thinking': 'A problem-solving approach that involves breaking down complex problems into smaller parts, designing algorithms, and using data to find solutions.',
+        'Data Literacy': 'The ability to understand, interpret, and use data.',
+        'Debugging': 'The process of identifying and correcting in instructions or code.',
+        'Decomposition': 'Breaking down a complex problem into smaller, more manageable parts.',
+        'Digital Footprint': 'The trail of data that people leave behind when they use the internet or other digital technologies.',
         'Iteration': 'Repeating a set of instructions or steps a certain number of times or until a condition is met.',
         'Prototype': 'An early sample or model of a product used to test concepts or processes.',
-        'Computational Thinking': 'A problem-solving process that involves decomposition, pattern recognition, abstraction, and algorithm design.',
-        'Decomposition': 'Breaking down a complex problem into smaller, more manageable parts.',
-        'Abstraction': 'The process of simplifying complex systems by focusing on the important details and ignoring the irrelevant ones.',
-        'Recursion': 'Breaking a component down into smaller components using the same function e.g. Imagine telling a story where each part contains a shorter version of the same story, getting simpler each time until it reaches the ending.',
         'Pseudocode': 'A simple way of describing a set of instructions that does not have to use specific syntax i.e. can be written in plain English.',
-        'Variable': 'A named container for a particular value or piece of data.'
+        'Recursion': 'Breaking a component down into smaller components using the same function e.g. Imagine telling a story where each part contains a shorter version of the same story, getting simpler each time until it reaches the ending.',
+        'Variable': 'A named container for storing a particular value or piece of data.'
     }
     return render_template('glossary.html', glossary=glossary_terms)
 

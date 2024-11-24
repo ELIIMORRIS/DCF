@@ -1,10 +1,17 @@
-document.addEventListener("DOMContentLoaded", function(){
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  });
-  
+document.addEventListener("DOMContentLoaded", function() {
+    // initialize tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+
+    // Check completion status for 'spreadsheet_formulae'
+    checkCompletionStatus('spreadsheet_formulae');
+
+    // Check completion status for the current page ID, if available
+    const pageId = document.body.getAttribute('data-page-id');
+    if (pageId) {
+        checkCompletionStatus(pageId);
+    }
+});
 
   function markAsComplete(item) {
     localStorage.setItem(item, 'completed');
@@ -20,17 +27,6 @@ function checkCompletionStatus(item) {
         button.disabled = true;
     }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    checkCompletionStatus('spreadsheet_formulae');
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const pageId = document.body.getAttribute('data-page-id');
-    if (pageId) {
-        checkCompletionStatus(pageId);
-    }
-});
 
 function allowDrop(event) {
     event.preventDefault();
