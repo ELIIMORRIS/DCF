@@ -5,7 +5,7 @@ from jinja2 import TemplateNotFound
 
 app = Flask(__name__)
 
-# Define the index for your pages
+# Define the index for pages
 PAGE_CONTENTS = {
     "data_format": "Collect, enter, organise, analyse data into different formats, tables, pie chart bar chart tally chart line graph database and spreadsheet. Qualitative Data Quantitative Data. Discrete data continuous data. Data sources Google Sheets",
     "data_sets": "Construct, refine, interrogate data sets within tables, chart, spreadsheet, and database. Analyse data set. data collection, statistical, survey, average, median, mode, pattern",

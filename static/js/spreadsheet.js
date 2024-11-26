@@ -16,7 +16,7 @@
             licenseKey: 'non-commercial-and-evaluation'
         });
 
-        // Initialize Handsontable with the defined data and settings
+        // Initialie Handsontable with the defined data and settings
         const hot = new Handsontable(container, {
             data: data,
             rowHeaders: true,
